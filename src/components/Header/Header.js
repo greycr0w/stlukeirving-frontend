@@ -42,13 +42,6 @@ class Header extends Component {
                     <div className="collapse navbar-collapse" id="navigation">
                         <ul className="nav navbar-nav">
                             <li className="dropdown"><Link to="/">Home <span className="nav_arrow"></span></Link>
-                                <ul className="sub-menu">
-                                    <li><a href="home-1.html">Home 01</a></li>
-                                    <li><a href="home-2.html">Home 02</a></li>
-                                    <li><a href="home-3.html">Home 03</a></li>
-                                    <li><a href="home-4.html">Home 04</a></li>
-                                    <li><a href="home-5.html">Home 05</a></li>
-                                </ul>
                             </li>
                             <li className="dropdown">
                             <Link to="/weeklybulletin">Weekly Bulletin <span className="nav_arrow">
