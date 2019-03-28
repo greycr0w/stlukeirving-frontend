@@ -10,9 +10,18 @@ import Footer from './components/Footer/Footer'
 import DonationPage from './components/DonationPage/DonationPage'
 import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
+
+
+
+
+
+
 class App extends Component {
   render() {
+
     return (
+      
+
         <div>
         <Router>
         <Header></Header>

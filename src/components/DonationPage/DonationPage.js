@@ -1,55 +1,104 @@
 import React, {Component} from 'react';
 import { setServers } from 'dns';
-import { InputGroup, InputGroupAddon, InputGroupText, Input, FormControl } from 'react-bootstrap';
+import { InputGroup, FormControl, FormCheck, FormGroup } from 'react-bootstrap';
+import Checkbox from 'react-simple-checkbox';
+import NumberFormat from 'react-number-format';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+    Switch,
+  } from 'react-router-dom';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button, Alert } from 'reactstrap';
+  
+import axios from 'axios'
+
 
 
 class DonationPage extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            isPayClick: false,
+            categories: [],
+            active: "",
             amount: "",
             message: "",
-            fullname: "", 
-            email: ""
+            fullname: "",
+            phone: "",
+            tak: false, 
+            email: "",
+            isMounted: false
         }
+
+
 
         this.amounts = [10, 25, 50, 100, 500];
     }
 
 
+    
     onSelectAmount(val) {
         this.setState({amount: val});
 
     }
 
     handleAmountChange(e) {
-        this.setState({amount: e.target.value});
+        this.setState({amount: e.value})
 
     }
 
-    handleEmailChange(e) {
-        this.setState({email: e.target.value});
-    }
-    
-    handleFullnameChange(e) {
-        this.setState({fullname: e.target.value})
+    //same event handler for both inputs
+    handleChange(event) {
+        this.setState({[event.target.name]: event.target.value});
     }
 
-    handleMessageChange(e) {
-            this.setState({message: e.target.value})
+    componentDidMount() {
+
+        axios({ method: 'get',
+        url: 'https://api.stlukeirving.org/donation_category',
+        })
+        .then( (response) => {
+            
+            console.log(response.data);
+            this.setState({categories: response.data})
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
+
+    }
+
+ 
+
+    handleTakChange(e) {
+        this.setState({tak: e})
+    }
+
+    donate() {
+        if(this.state.isMounted === false) {
+            this.setState({isMounted: true})
+        }
+        if(!(this.state.amount == null || this.state.amount.length == 0) && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tak == false)) {
+            
+        } 
         
-    }
+        
 
+    }
     render() {
 
-        console.log(this.state.amount)
-        console.log(this.state.email)
-        console.log(this.state.fullname)
-        console.log(this.state.message)
 
+        console.log(this.state.isMounted)
+
+
+        
         return (
             <div>
+
             <section className="sa-page-title text-left">
                 <div className="container">
                     <div className="row">
@@ -67,25 +116,82 @@ class DonationPage extends Component {
                     </div>
                 </div>
             </section>
-
-            <div className="section-padding">
+            <section className="sa-place-section pd-default-3 text-center" ref="selection">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-7">
+                        <div className="sa-section-title text-center">
+                            <h2>Support our Saints</h2>
+                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some</p>
+                        </div>
+                    </div>
+                </div>                 
+                <div className="row justify-content-center">
+                {this.state.categories.map((category) => { 
+                    return (
+                    <div className="col-lg-3 col-md-4">
+                        <div className="sa-place-single">
+                        <img className="img-responsive" src={category.photo ? category.photo.access_url : "https://via.placeholder.com/400x300"} />
+                                <div className="sa-place-info">
+                            
+                                <h2>{category.name}</h2>
+                                <p>View on Maps</p>
+                                <a className="sa-btn-transparent" onClick={a => { this.setState({ active: category }); this.refs.donation.scrollIntoView({behavior:'smooth',block:'start'})}}>{this.state.active === category ? 'Selected' : 'Choose'} <i className="fa fa-caret-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    ) 
+                    })}
+                </div>
+            </div>
+        </section>
+        
+            <div className="section-padding" ref="donation">
                 <div className="container">
                     <div className="donation_form">
                         <form>
+                    
+
                             <div className="form-group">
+                                <div className="row">
+                                    <div className="col-md-3 col-lg-2">
+                                        <label className="form-label">Chosen *</label>
+                                    </div>
+                                    
+                                        { this.state.active ? <div className="col-md-9">
+                                            { this.state.active.name }
+                                        </div> : <div className="col-md-9" onClick={a => this.refs.selection.scrollIntoView({behavior:'smooth',block:'start'})}>
+                                            <Errors  errors="Please select an entitiy."/>
+                                        </div>}
+                                </div>
                                 <div className="row">
                                     <div className="col-md-3 col-lg-2">
                                         <label className="form-label">Donation Amount *</label>
                                     </div>
                                     <div className="col-md-9 col-lg-10">
                                         <div className="input-group mb-3">
-                                        <div className="input-group-prepend">
-                                            <span className="input-group-text" id="basic-addon1">$</span>
+                                            <div className="input-group-prepend">
+                                                <span className="input-group-text" id="basic-addon1">$</span>
+                                        
+                                            </div>
+                                            <NumberFormat allowNegative={false} className="form-control border w-auto" thousandSeparator={true} value={this.state.amount}  onValueChange={this.handleAmountChange.bind(this)}/>
+
+                                            <div className="error-msg">
+                                            {(!this.state.amount || !this.state.amount.length) && this.state.isMounted == true 
+                                            ?
+                                            <Errors errors="Donation Amount is required."/>
+                                            :
+                                            null
+                                            }
                                         </div>
-                                        <input type="number" className="form-control border w-auto" value={this.state.amount} onChange={this.handleAmountChange.bind(this)}></input>
+
                                         </div>
+                                       
+                                    
+
                                         <ul className="select_amount">
                                         {this.amounts.map(item => <li key={item} className={item == this.state.amount ? 'active' : ''} onClick={() => this.onSelectAmount(item)}>{item}$</li>)}
+                                        
                                         </ul>
                                     </div>
                                 </div>
@@ -99,7 +205,8 @@ class DonationPage extends Component {
                                         <label className="form-label">Message</label>
                                     </div>
                                     <div className="col-md-9 col-lg-10">
-                                    <InputGroup  value={this.state.message} onChange={this.handleMessageChange.bind(this)}>
+
+                                    <InputGroup name="message" value={this.state.message} onChange={this.handleChange.bind(this)}>
                                         <FormControl
                                         className="form-control border"
                                         rows="3"
@@ -121,12 +228,44 @@ class DonationPage extends Component {
                                     <div className="col-md-9 col-lg-10">
                                         <div className="row">
                                             <div className="col-sm-6">
-                                                <input type="text" className="form-control border" placeholder="Full Name" value={this.state.fullname} onChange={this.handleFullnameChange.bind(this)}></input>
-                                            </div>
-                                            <div className="col-sm-6">
-                                                <input type="email" className="form-control border" placeholder="Email Address" value={this.state.email} onChange={this.handleEmailChange.bind(this)}></input>
-                                            </div>
+                                                <input type="text" className="form-control border" placeholder="Fullname" name="fullname" value={this.state.fullname} onChange={this.handleChange.bind(this)}></input>
+                                                {(!this.state.fullname || !this.state.fullname.length) && this.state.isMounted == true 
+                                                ?
+                                                <Errors errors="Fullname is required."/>
+                                                :
+                                                null
+                                                }
+                                                    </div>
+                                          
+                                            
                                         </div>
+                                        <div className="row mt-3">
+                                           
+                                                    <div className="col-sm-6">
+                                                        <input type="email" className="form-control border" placeholder="Email address" name="email" value={this.state.email} onChange={this.handleChange.bind(this)}></input>
+                                                        {(!this.state.email || !this.state.email.length) && this.state.isMounted == true 
+                                                        ?
+                                                        <Errors errors="Email addrress is required."/>
+                                                        :
+                                                        null
+                                                        }
+                                                    </div>
+                                            
+                                        </div>
+                                        <div className="row mt-3">
+                                           
+                                           <div className="col-sm-6">
+                                               <input type="email" className="form-control border" placeholder="Phone number" name="phone" value={this.state.phone} onChange={this.handleChange.bind(this)}></input>
+                                               {(!this.state.phone || !this.state.phone.length) && this.state.isMounted == true 
+                                               ?
+                                               <Errors errors="Phone number is required."/>
+                                               :
+                                               null
+                                               }
+                                           </div>
+                                   
+                               </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -136,9 +275,32 @@ class DonationPage extends Component {
                                         &nbsp;
                                     </div>
                                     <div className="col-md-9 col-lg-10">
-                                        <input type="submit" className="btn dark-btn" value="Donate Now"></input>
+                                    <Link className="btn dark-btn" to="/donate"   onClick={this.donate.bind(this)}>Donate</Link>
+                                        <div className="form-check">
+                                        <Checkbox
+                                        color="#deb668"
+                                        className="form-check-input universal-checkbox"
+                                        size="3"
+                                        tickSize="3"
+                                        id="id1"
+                                        checked={this.state.tak}
+                                        onChange={this.handleTakChange.bind(this)}
+                                        >
+
+                                        </Checkbox>
+                                        <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on phone number</label>
+                                       
+                                        </div>
+                                        {this.state.tak === false && this.state.isMounted == true 
+                                        ?
+                                        <Errors errors="You need to agree to our Terms and Conditions."/>
+                                        :
+                                        null
+                                        }
                                     </div>
+                  
                                 </div>
+
                             </div>
                         </form>
                     </div>
@@ -149,5 +311,19 @@ class DonationPage extends Component {
         )
     }
 }
+
+
+function Errors(props) {
+    const errors = props.errors;
+
+    if (true) {
+        return (
+            <Alert color="danger" isOpen={true}>
+                {errors}
+            </Alert>
+        );
+    }
+    return "";
+  }
 
 export default DonationPage;

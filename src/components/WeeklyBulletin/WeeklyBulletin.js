@@ -1,15 +1,36 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 class WeeklyBulletin extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-
+            pdfFile: null
         }
+      
     }
+    componentDidMount() {
 
+        let pdfFile
+        axios({ method: 'get',
+        url: 'https://api.stlukeirving.org/bulletin/last',
+        })
+        .then( (response) => {
+            pdfFile = response.data
+            console.log(response);
+            this.setState({pdfFile: pdfFile})
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
+
+
+    }
     render() {
+console.log(this.state);
         return(
             <div>
             <section className="sa-page-title donation text-center">
@@ -23,6 +44,7 @@ class WeeklyBulletin extends Component {
                         <ul>
                             <li className="breadcrumb-item"><a href="shop-details.html#">Home</a></li>
                             <li className="breadcrumb-item active">Weekly Bulletin</li>
+
                         </ul>
                         </nav>
                     </div>
@@ -31,12 +53,16 @@ class WeeklyBulletin extends Component {
         </section>
 
 
+
         <section className="sa-product-details-section">
             <div className="container sa-bg-color">
                 <div className="row">
+                <div className="weekly-bulletin-iframe">
+                {this.state.pdfFile ? <iframe className="pdf-file" src={this.state.pdfFile.file.access_url}></iframe> : null}
+                </div>
                     <div className="col-lg-5 col-md-12">
                         <div className="row justify-content-center text-center">
-                           
+
                         </div>
                     </div>
                     
@@ -49,13 +75,16 @@ class WeeklyBulletin extends Component {
                                 </ul>
                             </div>
                             <div className="sa-single-product-details">
+                                {this.state.pdfFile ? <a href={this.state.pdfFile.file.access_url} className="btn btn-lg dark-btn mt-3">Download</a> : null}
+
                                 <h2>Download our Weekly Bulletin, and be up to date with our newest events.</h2>
+
                                 <br></br>
                                 <br></br>
                                 <br></br>
                                 <div className="mt-5">
                                 <h5>Short Description</h5>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered altera putintion in some form, by injected humour, or randomised words which don't look even slightly you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                <p>This is Weekly Bulletin, in this PDF</p>
                                 </div>
                             </div>
                         </div>
