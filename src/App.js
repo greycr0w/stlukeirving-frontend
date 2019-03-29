@@ -8,6 +8,7 @@ import {
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import DonationPage from './components/DonationPage/DonationPage'
+import DonationApprovalPage from './components/DonationPage/DonationApprovalPage'
 import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
 
@@ -29,6 +30,8 @@ class App extends Component {
                     <div>
 						<Route exact path="/" component={Home} />
                         <Route path="/donate" component={DonationPage}/>
+                        <Route path="/donation/:id/approve" component={DonationApprovalPage}/>
+
                         <Route path="/weeklybulletin" component={WeeklyBulletin}/>
                     </div>
                     <Footer></Footer>
