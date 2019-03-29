@@ -24,6 +24,8 @@ class DonationPage extends Component {
             categories: [],
             active: "",
             amount: "",
+            country: "",
+            countries: ["c", "sad", "life"],
             message: "",
             fullname: "",
             phone: "",
@@ -70,6 +72,19 @@ class DonationPage extends Component {
             console.log(response);
         });
 
+        axios({ method: 'get',
+        url: 'https://api.stlukeirving.org/countries',
+        })
+        .then( (response) => {
+            
+            console.log(response.data);
+            this.setState({countries: response.data})
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
     }
 
  
@@ -170,7 +185,8 @@ class DonationPage extends Component {
                                     </div>
                                     
                                         { this.state.active ? <div className="col-md-9">
-                                            { this.state.active.name }
+
+                                            <h2>{ this.state.active.name }</h2>
                                         </div> : <div className="col-md-9" onClick={a => this.refs.selection.scrollIntoView({behavior:'smooth',block:'start'})}>
                                             <Errors  errors="Please select an entitiy."/>
                                         </div>}
@@ -274,8 +290,23 @@ class DonationPage extends Component {
                                                null
                                                }
                                            </div>
-                                   
-                               </div>
+                                         
+                                        </div>
+                                        <div className="row mt-3">
+                                           
+                                           <div className="col-sm-6">
+                                           
+                                               <select className="select form-control border">
+                                               {this.state.countries.map((country) => { 
+                                                   return (
+                                               <option value={country} onChange={this.handleChange.bind(this)}>{country}</option>
+
+                                                )})}
+                                               this.state
+                                               </select>
+                                               
+                                           </div>
+                                        </div>
                                         
                                     </div>
                                 </div>
@@ -317,9 +348,9 @@ class DonationPage extends Component {
                             </div>
                         </form>
                     </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
         )
     }
