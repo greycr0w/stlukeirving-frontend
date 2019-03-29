@@ -95,8 +95,8 @@ class DonationPage extends Component {
 
                 // You are beign redirected to PayPal...
 
-                if(data.approve_url) {
-                    window.location = data.approve_url;
+                if(data.data.approve_url) {
+                    window.location = data.data.approve_url;
                 }
             } catch(e) {
                 // Error: e.data.message
