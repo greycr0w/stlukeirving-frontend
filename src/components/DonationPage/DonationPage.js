@@ -78,24 +78,33 @@ class DonationPage extends Component {
         this.setState({tak: e})
     }
 
-    donate() {
+    async donate() {
         if(this.state.isMounted === false) {
             this.setState({isMounted: true})
         }
-        if(!(this.state.amount == null || this.state.amount.length == 0) && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tak == false)) {
-            
-        } 
-        
-        
 
+        if( this.state.active  && !(this.state.amount == null || this.state.amount.length == 0) && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tak == false)) {
+            try {
+                var data = await axios.put('https://api.stlukeirving.org/donation', {
+                    name: this.state.fullname,
+                    email: this.state.email,
+                    phone: this.state.phone,
+                    amount: this.state.amount,
+                    category: { id: this.state.active.id }
+                });
+
+                // You are beign redirected to PayPal...
+
+                if(data.approve_url) {
+                    window.location = data.approve_url;
+                }
+            } catch(e) {
+                // Error: e.data.message
+            }
+        }
     }
+
     render() {
-
-
-        console.log(this.state.isMounted)
-
-
-        
         return (
             <div>
 
@@ -275,7 +284,7 @@ class DonationPage extends Component {
                                         &nbsp;
                                     </div>
                                     <div className="col-md-9 col-lg-10">
-                                    <Link className="btn dark-btn" to="/donate"   onClick={this.donate.bind(this)}>Donate</Link>
+                                    <a href={true} className="btn dark-btn" onClick={this.donate.bind(this)}>Donate</a>
                                         <div className="form-check">
                                         <Checkbox
                                         color="#deb668"
