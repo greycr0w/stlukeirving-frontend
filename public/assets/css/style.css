@@ -3038,6 +3038,10 @@ h6 {
 	margin-top:0px;
 	margin-right: 0px;
 }
+
+svg {
+	width: 100%;
+  }
 #menu_slide {
 
 	display: block;

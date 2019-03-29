@@ -11,8 +11,8 @@ import {
   } from 'react-router-dom';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Alert } from 'reactstrap';
-  
-import axios from 'axios'
+import ReactFitText from 'react-fittext';
+import axios from 'axios';
 
 
 
@@ -134,7 +134,7 @@ class DonationPage extends Component {
                         <img className="img-responsive" src={category.photo ? category.photo.access_url : "https://via.placeholder.com/400x300"} />
                                 <div className="sa-place-info">
                             
-                                <h2>{category.name}</h2>
+                                
                                 <p>View on Maps</p>
                                 <a className="sa-btn-transparent" onClick={a => { this.setState({ active: category }); this.refs.donation.scrollIntoView({behavior:'smooth',block:'start'})}}>{this.state.active === category ? 'Selected' : 'Choose'} <i className="fa fa-caret-right"></i></a>
                             </div>
