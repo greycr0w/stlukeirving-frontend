@@ -3595,6 +3595,7 @@ blockquote p {
     color: #555b62;
 }
 .sa-btn-transparent{
+	cursor: pointer;
 	padding: 13px 35px;
 	border: 1px solid #deb668;
 	text-transform: uppercase;

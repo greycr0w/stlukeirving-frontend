@@ -143,7 +143,9 @@ class DonationPage extends Component {
                         <img className="img-responsive" src={category.photo ? category.photo.access_url : "https://via.placeholder.com/400x300"} />
                                 <div className="sa-place-info">
                             
-                                
+                                <ReactFitText maxFontSize={28}>
+                                <h2>{category.name}</h2>
+                                </ReactFitText>
                                 <p>View on Maps</p>
                                 <a className="sa-btn-transparent" onClick={a => { this.setState({ active: category }); this.refs.donation.scrollIntoView({behavior:'smooth',block:'start'})}}>{this.state.active === category ? 'Selected' : 'Choose'} <i className="fa fa-caret-right"></i></a>
                             </div>
@@ -286,26 +288,28 @@ class DonationPage extends Component {
                                     <div className="col-md-9 col-lg-10">
                                     <a href={true} className="btn dark-btn" onClick={this.donate.bind(this)}>Donate</a>
                                         <div className="form-check">
-                                        <Checkbox
-                                        color="#deb668"
-                                        className="form-check-input universal-checkbox"
-                                        size="3"
-                                        tickSize="3"
-                                        id="id1"
-                                        checked={this.state.tak}
-                                        onChange={this.handleTakChange.bind(this)}
-                                        >
+                                            <Checkbox
+                                            color="#deb668"
+                                            className="form-check-input universal-checkbox"
+                                            size="3"
+                                            tickSize="3"
+                                            id="id1"
+                                            checked={this.state.tak}
+                                            onChange={this.handleTakChange.bind(this)}
+                                            >
 
-                                        </Checkbox>
-                                        <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on phone number</label>
-                                       
+                                            </Checkbox>
+                                            <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
+                                        
+                                            </label>
+                                            {this.state.tak === false && this.state.isMounted == true 
+                                            ?
+                                            <Errors errors="You need to agree to our Terms and Conditions."/>
+                                            :
+                                            null
+                                            }
                                         </div>
-                                        {this.state.tak === false && this.state.isMounted == true 
-                                        ?
-                                        <Errors errors="You need to agree to our Terms and Conditions."/>
-                                        :
-                                        null
-                                        }
+                                        
                                     </div>
                   
                                 </div>
