@@ -59,12 +59,11 @@ class Home extends Component {
             <div className="sa-upcoming-sermons pd-default-3">
             <div className="container">
                 <div className="row">
+                
                     <div className="col-lg-7 col-12">
-                        
+               
                         <h2 className="sa-video-title">Upcoming Sermons</h2>
-                        <MassSchedule>
-                                
-                            </MassSchedule>
+                        
                         <div className="sa-events-area">
                             <div className="media">
                                 <img src="assets/images/event2/1.jpg" alt="Event image"></img>
@@ -105,7 +104,14 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="col-lg-5 col-md-12">
+                    <h2 className="sa-video-title">See our Mass Schedule</h2>
+
+                    <h2 className="sa-video-title"> <MassSchedule></MassSchedule></h2>
+
+                   
+
                         <h2 className="sa-video-title">Previous Sermons</h2>
                         <div className="sa-video-block mg-bottom-30">
                             <div className="video-blog">
