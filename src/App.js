@@ -11,7 +11,8 @@ import DonationPage from './components/DonationPage/DonationPage'
 import DonationApprovalPage from './components/DonationPage/DonationApprovalPage'
 import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
-
+import Events from './components/Events/Events'
+import MassSchedule from './components/MassSchedule/MassSchedule';
 
 
 
@@ -28,11 +29,13 @@ class App extends Component {
         <Header></Header>
 
                     <div>
-						<Route exact path="/" component={Home} />
+						            <Route exact path="/" component={Home} />
                         <Route path="/donate" component={DonationPage}/>
                         <Route path="/donation/:id/approve" component={DonationApprovalPage}/>
-
                         <Route path="/weeklybulletin" component={WeeklyBulletin}/>
+                        <Route path="/events" component={Events}/>
+
+                        <Route path="/mass_schedule" component={MassSchedule}/>
                     </div>
                     <Footer></Footer>
 

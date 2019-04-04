@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax'
+import MassSchedule from '../MassSchedule/MassSchedule'
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -61,6 +62,9 @@ class Home extends Component {
                     <div className="col-lg-7 col-12">
                         
                         <h2 className="sa-video-title">Upcoming Sermons</h2>
+                        <MassSchedule>
+                                
+                            </MassSchedule>
                         <div className="sa-events-area">
                             <div className="media">
                                 <img src="assets/images/event2/1.jpg" alt="Event image"></img>

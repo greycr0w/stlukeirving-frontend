@@ -13,7 +13,7 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button, Alert } from 'reactstrap';
 import ReactFitText from 'react-fittext';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 
 
 class DonationPage extends Component {
@@ -94,6 +94,7 @@ class DonationPage extends Component {
     }
 
     async donate() {
+        
         if(this.state.isMounted === false) {
             this.setState({isMounted: true})
         }
@@ -114,7 +115,11 @@ class DonationPage extends Component {
                     window.location = data.data.approve_url;
                 }
             } catch(e) {
-                // Error: e.data.message
+                Swal.fire(
+                    'That\'s Sad!',
+                    'Your donation didin\'t go through our system, please try again.',
+                    'error'
+                )
             }
         }
     }

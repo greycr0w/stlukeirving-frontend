@@ -5,6 +5,8 @@ import {
     Route,
     Switch,
   } from 'react-router-dom';
+import WeeklyBulletin from '../WeeklyBulletin/WeeklyBulletin';
+import MassSchedule from '../MassSchedule/MassSchedule';
 
 class Header extends Component {
 
@@ -43,8 +45,16 @@ class Header extends Component {
                         <ul className="nav navbar-nav">
                             <li className="dropdown"><Link to="/">Home <span className="nav_arrow"></span></Link>
                             </li>
+                            
                             <li className="dropdown">
-                            <Link to="/weeklybulletin">Weekly Bulletin <span className="nav_arrow">
+                            <Link to="/events">Events<span className="nav_arrow">
+                                
+                            </span></Link>
+
+                            </li>
+
+                            <li className="dropdown">
+                            <Link to="/mass_schedule">Schedule<span className="nav_arrow">
                                 
                             </span></Link>
 
