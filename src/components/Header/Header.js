@@ -53,12 +53,6 @@ class Header extends Component {
 
                             </li>
 
-                            <li className="dropdown">
-                            <Link to="/mass_schedule">Schedule<span className="nav_arrow">
-                                
-                            </span></Link>
-
-                            </li>
                             <li className="dropdown"><a href="home-4.html#">Templates <span className="nav_arrow"></span></a>
                                 <ul className="sub-menu">
                                     <li><a target="_blank" href="https://preview.themeforest.net/item/grafelli-data-driven-donation-html5-template/full_screen_preview/23069873?_ga=2.137700400.1840276854.1545523954-415330251.1529251968">Grafelli</a></li>

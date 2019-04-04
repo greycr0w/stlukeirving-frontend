@@ -9,12 +9,19 @@ import {
     Route,
     Switch,
   } from 'react-router-dom';
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Alert } from 'reactstrap';
+import {Alert } from 'reactstrap';
 import ReactFitText from 'react-fittext';
 import axios from 'axios';
+import { ClipLoader } from 'react-spinners';
+import { css } from '@emotion/core';
+
 import Swal from 'sweetalert2';
 
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 
 class DonationPage extends Component {
 
@@ -31,7 +38,8 @@ class DonationPage extends Component {
             phone: "",
             tak: false, 
             email: "",
-            isMounted: false
+            isMounted: false,
+            isLoading: true
         }
 
 
@@ -65,6 +73,7 @@ class DonationPage extends Component {
             
             console.log(response.data);
             this.setState({categories: response.data})
+            this.setState({isLoading: false})
 
         })
         .catch(function (response) {
@@ -125,9 +134,10 @@ class DonationPage extends Component {
     }
 
     render() {
+        
         return (
             <div>
-
+           
             <section className="sa-page-title text-left">
                 <div className="container">
                     <div className="row">
@@ -156,6 +166,13 @@ class DonationPage extends Component {
                     </div>
                 </div>                 
                 <div className="row justify-content-center">
+                <ClipLoader
+                css={override}
+                sizeUnit={"px"}
+                size={80}
+                color={'#deb668'}
+                loading={this.state.isLoading}
+            />
                 {this.state.categories.map((category) => { 
                     return (
                     <div className="col-lg-3 col-md-4">
