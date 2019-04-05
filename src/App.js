@@ -35,7 +35,7 @@ class App extends Component {
                         <Route path="/weeklybulletin" component={WeeklyBulletin}/>
                         <Route path="/events" component={Events}/>
 
-                        <Route path="/mass_schedule" component={MassSchedule}/>
+                        
                     </div>
                     <Footer></Footer>
 

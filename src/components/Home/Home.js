@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom';
 import {Parallax} from 'react-parallax'
 import MassSchedule from '../MassSchedule/MassSchedule'
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -24,32 +24,15 @@ class Home extends Component {
                                     <div className="sa-banner-slider">
                                         <div className="item">
                                             <div className="banner-details">
-                                                <h2>We Believe In God</h2>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority <br></br>have suffered alteration in some</p>
+                                                <h2>St. Luke Irving</h2>
+                                                <p>God cares for you <br></br></p>
                                                 <a href="home-4.html#" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-5 col-md-10 col-12">
-                                    <div className="sa-banner-audio-area">
-                                        <h3>Living A Christian Life</h3>
-                                        <p>Many desktop publishing packages and website...</p>
-                                        <div className="audio-player">
-                                            <div id="play-btn" className="audio-button">
-                                                <i className="fa fa-play"> </i>
-                                                <i className="fa fa-pause"></i>
-                                            </div>
-                                            <a className="audio-wrapper" id="player-container" href="javascript:;">
-                                                <audio id="player" ontimeupdate="initProgressBar()">
-                                                    <source src="http://www.lukeduncan.me/oslo.mp3" type="audio/mp3"></source>
-                                                </audio>
-                                            </a>
-                                            <div className="player-controls scrubber">
-                                                <small className="end-time">5:44</small>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -108,7 +91,6 @@ class Home extends Component {
                     <h2 className="sa-video-title">See our Mass Schedule</h2>
 
                     <h2 className="sa-video-title"> <MassSchedule></MassSchedule></h2>
-
                    
 
                         <h2 className="sa-video-title">Previous Sermons</h2>

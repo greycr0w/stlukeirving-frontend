@@ -52,6 +52,12 @@
 
 }
 
+.newsletter-form {
+	margin: auto;
+	width: 50%;
+	border: 3px solid #deb668;
+	padding: 10px;
+}
 .weekly-bulletin-iframe {
 	margin: auto;
 	width: 100%;

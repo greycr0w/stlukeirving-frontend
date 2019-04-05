@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import JoinNewsletter from '../JoinNewsletter/JoinNewsletter'
 
 class Footer extends Component {
 
@@ -30,17 +30,7 @@ class Footer extends Component {
                             </div>
                         </div>
                         <div className="col-md-4 top_widget">
-                        
-                            <div className="newsletter">
-
-                                <form>
-                                   
-                                    <div className="email_input">
-                                        <input type="email" placeholder="Email address"></input>
-                                    </div>
-                                    <button type="submit">Submit <i className="fa fa-caret-right"></i></button>
-                                </form>
-                            </div>
+                        <JoinNewsletter></JoinNewsletter>
                         </div>
                         <div className="col-md-4 top_widget">
                             <div className="follow_us">
