@@ -52,11 +52,18 @@
 
 }
 
+.newsletter-button {
+	text-align: center;
+}
 .newsletter-form {
 	margin: auto;
-	width: 50%;
+	width: 75%;
 	border: 3px solid #deb668;
 	padding: 10px;
+}
+.newsletter-popup-padding {
+	padding-top: 65px;
+	padding-bottom: 70px;
 }
 .weekly-bulletin-iframe {
 	margin: auto;
@@ -78,6 +85,25 @@
 	height: 50px;
     width: 200px;
 }
+.newsletter-checkbox {
+	
+
+}
+
+.alert-newsletter {
+
+	padding: 2px;
+	font-size: 11px;
+	margin-bottom: 0px;
+	border: 0;
+}
+.inline-checkbox {
+	display: inline-block !important;
+}
+
+.newsletter-checkbox-label {
+	display: inline;
+}
 
 .app-logo-wrapper {
 	margin-left: 150px;
@@ -93,7 +119,7 @@
     vertical-align: middle;
 }
 .universal-checkbox {
-
+	display: flex!important;
 	outline: none;
 
 }
@@ -852,7 +878,7 @@ header.sticky .header_top {
 	padding:0;
 }
 .sa-header li a {
-	font-weight: 700;
+	font-weight: 600;
 	position: relative;
 	display: block;
 	color: #fff;
@@ -875,7 +901,7 @@ header.sticky .header_top {
 	sub-menu
 -------------*/
 .navbar .navbar-nav li.dropdown > a {
-	padding-right: 28px;
+	padding-right: 15px;
 }
 .navbar .navbar-nav li.dropdown > a::after {
   

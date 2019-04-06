@@ -43,52 +43,64 @@ class Header extends Component {
 
                     <div className="collapse navbar-collapse" id="navigation">
                         <ul className="nav navbar-nav">
+                            
                             <li className="dropdown"><Link to="/">Home <span className="nav_arrow"></span></Link>
-                            </li>
                             
+                            </li>
+
                             <li className="dropdown">
-                            <Link to="/events">Events<span className="nav_arrow">
-                                
-                            </span></Link>
+                                <Link to="/weeklybulletin">Weekly Bulletin<span className="nav_arrow">
+                                    
+                                </span></Link>
 
                             </li>
 
-                            <li className="dropdown"><a href="home-4.html#">Templates <span className="nav_arrow"></span></a>
+                            <li className="dropdown">
+                                <Link to="/formation">Formation<span className="nav_arrow">
+                                    
+                                </span></Link>
+
+                            </li>
+
+                            <li className="dropdown">
+                                <Link to="/services">Services<span className="nav_arrow">
+                                    
+                                </span></Link>
                                 <ul className="sub-menu">
-                                    <li><a target="_blank" href="https://preview.themeforest.net/item/grafelli-data-driven-donation-html5-template/full_screen_preview/23069873?_ga=2.137700400.1840276854.1545523954-415330251.1529251968">Grafelli</a></li>
+                                        <li><Link to="/baptism">Baptism</Link></li>
+                                        <li><Link to="/marriage">Marriage</Link></li>
+                                    
                                 </ul>
                             </li>
-                            
-                            <li className="dropdown"><a href="home-4.html#">Landing <span className="nav_arrow"></span></a>
+
+                            <li className="dropdown">
+                                <Link to="/services">Our Community<span className="nav_arrow">
+                                    
+                                </span></Link>
                                 <ul className="sub-menu">
-                                    <li><a href="landing-charity.html">landing charity</a></li>
-                                    <li><a href="landing-donation.html">landing donation</a></li>
-                                    <li><a href="landing-event.html">landing event</a></li>
-                                    <li><a href="landing-ngo.html">landing ngo</a></li>
-                                    <li><a href="landing-non-profit.html">landing nonprofit</a></li>
+                                        <li><Link to="/history">History</Link></li>
+                                        <li><Link to="/information">Information</Link></li>
+                                    
                                 </ul>
                             </li>
-                            <li className="dropdown"><a href="home-4.html#">Landing <span className="nav_arrow"></span></a>
+
+                            <li className="dropdown">
+                                <Link to="/parish">Parish<span className="nav_arrow">
+                                    
+                                </span></Link>
                                 <ul className="sub-menu">
-                                    <li><a href="landing-charity.html">landing charity</a></li>
-                                    <li><a href="landing-donation.html">landing donation</a></li>
-                                    <li><a href="landing-event.html">landing event</a></li>
-                                    <li><a href="landing-ngo.html">landing ngo</a></li>
-                                    <li><a href="landing-non-profit.html">landing nonprofit</a></li>
+                                        <li><Link to="/parish_groups">Parish Groups</Link></li>
+                                        <li><Link to="/parish_staff">Parish Staff</Link></li>
+
                                 </ul>
                             </li>
-                            
-                            <li className="dropdown ">
-                                      <a className="user" href="home-4.html#"><i className="fa fa-2x fa-user" aria-hidden="true"></i></a>
-                                      <ul className="sub-menu">
-                                          <li><a href="home-4.html#">Dashboard</a></li>
-                                          <li><a href="home-4.html#">Update Profile</a></li>
-                                          <li><a href="home-4.html#">Logout</a></li>
-                                      </ul>
+
+                            <li className="dropdown">
+                                <a href="">Calendar</a>
                             </li>
 
                             <li>
-                            <Link className="btn dark-btn" to="/donate">Donate</Link>
+                                <Link className="btn dark-btn" to="/donate">Donate</Link>
                             </li>
                         </ul>
                       

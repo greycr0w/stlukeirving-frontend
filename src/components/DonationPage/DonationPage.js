@@ -36,7 +36,7 @@ class DonationPage extends Component {
             message: "",
             fullname: "",
             phone: "",
-            tak: false, 
+            tac: false, 
             email: "",
             isMounted: false,
             isLoading: true
@@ -65,6 +65,25 @@ class DonationPage extends Component {
     }
 
     componentDidMount() {
+
+
+
+        axios({ method: 'get',
+        url: 'https://api.stlukeirving.org/country',
+        })
+        .then( (response) => {
+            
+            console.log(response.data);
+
+            var us = response.data.filter(a=>a.key == "US")[0];
+            var active_id = (us && us.id) || response.data[0].id;
+            this.setState({countries: response.data, active_id})
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
 
         axios({ method: 'get',
         url: 'https://api.stlukeirving.org/donation_category',
@@ -99,7 +118,7 @@ class DonationPage extends Component {
  
 
     handleTakChange(e) {
-        this.setState({tak: e})
+        this.setState({tac: e})
     }
 
     async donate() {
@@ -108,13 +127,14 @@ class DonationPage extends Component {
             this.setState({isMounted: true})
         }
 
-        if( this.state.active  && !(this.state.amount == null || this.state.amount.length == 0) && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tak == false)) {
+        if( this.state.active  && !(this.state.amount == null || this.state.amount.length == 0) && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tac == false)) {
             try {
                 var data = await axios.put('https://api.stlukeirving.org/donation', {
                     name: this.state.fullname,
                     email: this.state.email,
                     phone: this.state.phone,
                     amount: this.state.amount,
+                    country: { id: this.state.active_id },
                     category: { id: this.state.active.id }
                 });
 
@@ -318,15 +338,14 @@ class DonationPage extends Component {
                                            
                                            <div className="col-sm-6">
                                            
-                                               <select className="select form-control border">
+                                              <select className="select form-control border" onChange={a => this.setState({ active_id: a.target.value })} value={this.state.active_id}>
                                                {this.state.countries.map((country) => { 
                                                    return (
-                                               <option value={country} onChange={this.handleChange.bind(this)}>{country}</option>
+                                               <option key={country.id} value={country.id}>{country.name}</option>
 
                                                 )})}
-                                               this.state
                                                </select>
-                                               
+                                    
                                            </div>
                                         </div>
                                         
@@ -339,7 +358,6 @@ class DonationPage extends Component {
                                         &nbsp;
                                     </div>
                                     <div className="col-md-9 col-lg-10">
-                                    <a href={true} className="btn dark-btn" onClick={this.donate.bind(this)}>Donate</a>
                                         <div className="form-check">
                                             <Checkbox
                                             color="#deb668"
@@ -347,7 +365,7 @@ class DonationPage extends Component {
                                             size="3"
                                             tickSize="3"
                                             id="id1"
-                                            checked={this.state.tak}
+                                            checked={this.state.tac}
                                             onChange={this.handleTakChange.bind(this)}
                                             >
 
@@ -355,14 +373,15 @@ class DonationPage extends Component {
                                             <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
                                         
                                             </label>
-                                            {this.state.tak === false && this.state.isMounted == true 
+                                            {this.state.tac === false && this.state.isMounted == true 
                                             ?
                                             <Errors errors="You need to agree to our Terms and Conditions."/>
                                             :
                                             null
                                             }
                                         </div>
-                                        
+                                        <a href={true} className="btn dark-btn" onClick={this.donate.bind(this)}>Donate</a>
+
                                     </div>
                   
                                 </div>

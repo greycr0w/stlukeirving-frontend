@@ -1,17 +1,12 @@
 import React, {Component} from 'react'
 import Popup from "reactjs-popup";
 
-import { setServers } from 'dns';
-import { InputGroup, FormControl, FormCheck, FormGroup } from 'react-bootstrap';
+import { InputGroup, FormControl, FormCheck} from 'react-bootstrap';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Checkbox from 'react-simple-checkbox';
 import NumberFormat from 'react-number-format';
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-  } from 'react-router-dom';
-import {Alert } from 'reactstrap';
+import {Redirect} from 'react-router-dom';
+import {Alert} from 'reactstrap';
 import ReactFitText from 'react-fittext';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
@@ -28,8 +23,14 @@ const override = css`
 
 
 let styles = {
-   
-    width: '40%',
+
+    width: '30%',
+
+};
+
+let stylesOverlay = {
+
+    paddingTop: '50px',
 
 };
 
@@ -40,13 +41,74 @@ class JoinNewsletter extends Component {
         super(props)
 
         this.state = {
+            redirect: false,
             fullname: "",
             phone: "",
             tak: false, 
-            email: ""
+            countries: [],
+            email: "",
+            isMounted: false
         }
     }
 
+    componentDidMount() {
+            axios({ method: 'get',
+            url: 'https://api.stlukeirving.org/country',
+            })
+            .then( (response) => {
+                
+                console.log(response.data);
+
+                var us = response.data.filter(a=>a.key == "US")[0];
+                var active_id = (us && us.id) || response.data[0].id;
+                this.setState({countries: response.data, active_id})
+
+            })
+            .catch(function (response) {
+                //handle error
+                console.log(response);
+            });
+         
+
+    }
+
+    async subscribe(close) {
+        if(this.state.isMounted === false) {
+            this.setState({isMounted: true})
+        }              
+          console.log("run")
+
+
+        if( this.state.active_id  && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tac == false)) {
+            try {
+                var data = await axios.put('https://api.stlukeirving.org/mailing_list_record', {
+                    name: this.state.fullname,
+                    email: this.state.email,
+                    phone: this.state.phone,
+                    country: { id: this.state.active_id }
+                });
+                console.log("run")
+                // You are beign redirected to PayPal...
+                 Swal.fire(
+                    'We are happy!',
+                    'Thank you for joining our community',
+                    'success'
+                ).then(()=> {
+                    close();
+
+                });
+
+
+               
+            } catch(e) {
+                Swal.fire(
+                    'That\'s Sad!',
+                    (e.response && e.response.data && e.response.data.message) || 'Something bad happened.',
+                    'error'
+                )
+            }
+        }
+    }
     handleChange(event) {
         this.setState({[event.target.name]: event.target.value});
     }
@@ -56,12 +118,16 @@ class JoinNewsletter extends Component {
     }
 
     render() {
+       
 
-        return(
-            <Popup trigger={<button className="btn dark-btn button"> Join Newsletter </button>} contentStyle={styles}modal>
+        return (
 
+            <Popup trigger={<button className="btn dark-btn button"> Join Newsletter </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
+            { close =>
             <section className="modal-mass">
-            <div className="section-padding" ref="donation">
+            <div className="newsletter-popup-padding" ref="donation">
+            <div className="header"> <h2>Join Newsletter</h2> </div>
+
                     <div className="newsletter-form donation_form">
                         <form>
                     
@@ -113,8 +179,12 @@ class JoinNewsletter extends Component {
                                            
                                            <div className="col-sm-12">
                                            
-                                               <select className="select form-control border">
-                                               
+                                               <select className="select form-control border" onChange={a => this.setState({ active_id: a.target.value })} value={this.state.active_id}>
+                                               {this.state.countries.map((country) => { 
+                                                   return (
+                                               <option key={country.id} value={country.id}>{country.name}</option>
+
+                                                )})}
                                                </select>
                                                
                                            </div>
@@ -122,46 +192,38 @@ class JoinNewsletter extends Component {
                                         
                             </div>
                             <div className="form-group">
-                                <div className="row">
-                                <div className="col-md-9 col-lg-10">
-
-                                <a href={true} className="btn dark-btn" >Join</a>
-</div>
-                                    <div className="col-md-9 col-lg-10">
-                                        <div className="form-check">
-                                            <Checkbox
-                                            color="#deb668"
-                                            className="form-check-input universal-checkbox"
-                                            size="3"
-                                            tickSize="3"
-                                            id="id1"
-                                            checked={this.state.tak}
-                                            onChange={this.handleTakChange.bind(this)}
-                                            >
-
-                                            </Checkbox>
-                                            <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
-                                        
-                                            </label>
-                                            {this.state.tak === false && this.state.isMounted == true 
-                                            ?
-                                            <Errors errors="You need to agree to our Terms and Conditions."/>
-                                            :
-                                            null
-                                            }
-                                        </div>
-                                        
+                                
+                                    <div className="form-check">
+                                                <Checkbox
+                                                color="#deb668"
+                                                className="form-check-input inline-checkbox"
+                                                size="3"
+                                                tickSize="3"
+                                                id="id1"
+                                                checked={this.state.tak}
+                                                onChange={this.handleTakChange.bind(this)}
+                                                >
+                                                </Checkbox>
+                                             
+                                        <label className="newsletter-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
+                                                
+                                                </label>
+                                                    {this.state.tak === false && this.state.isMounted == true 
+                                                    ?
+                                                    <Errors errors="You need to agree to our Terms and Conditions."/>
+                                                    :
+                                                    null
+                                                    }
                                     </div>
-                  
+                             
+                                    <a className="btn dark-btn mt-3" onClick={a => this.subscribe(close)} >Join</a>
                                 </div>
-
-                            </div>
                         </form>
                     </div>
                     </div>
             </section>
+            }
     </Popup>
-
         )
     }
 }
@@ -171,7 +233,7 @@ function Errors(props) {
 
     if (true) {
         return (
-            <Alert color="danger" isOpen={true}>
+            <Alert className="alert-newsletter" color="danger" isOpen={true}>
                 {errors}
             </Alert>
         );

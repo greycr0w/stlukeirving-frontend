@@ -29,7 +29,7 @@ class Footer extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4 top_widget">
+                        <div className="col-md-4 top_widget newsletter-button">
                         <JoinNewsletter></JoinNewsletter>
                         </div>
                         <div className="col-md-4 top_widget">

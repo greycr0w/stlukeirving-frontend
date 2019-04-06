@@ -13,8 +13,8 @@ import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
 import Events from './components/Events/Events'
 import MassSchedule from './components/MassSchedule/MassSchedule';
-
-
+import ServicePayment from './components/ServicePayment/ServicePayment';
+import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/UnsubscribeNewsletter';
 
 
 
@@ -34,10 +34,12 @@ class App extends Component {
                         <Route path="/donation/:id/approve" component={DonationApprovalPage}/>
                         <Route path="/weeklybulletin" component={WeeklyBulletin}/>
                         <Route path="/events" component={Events}/>
+                        <Route path="/service_payment" component={ServicePayment}/>
+                        <Route path="/unsubscribe" component={UnsubscribeNewsletter}/>
 
                         
                     </div>
-                    <Footer></Footer>
+        <Footer></Footer>
 
         </Router>
         </div>     

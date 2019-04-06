@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
-
-import { InputGroup, FormControl, FormCheck, FormGroup } from 'react-bootstrap';
-import Checkbox from 'react-simple-checkbox';
-import NumberFormat from 'react-number-format';
-
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Alert } from 'reactstrap';
-  
 import axios from 'axios'
 import queryString from 'query-string';
+import {Link} from 'react-router-dom';
 
 export default class DonationApprovalPage extends Component {
     constructor(props) {
@@ -49,7 +42,7 @@ export default class DonationApprovalPage extends Component {
                         <div className="col-md-12">
                             <nav className="breadcrumb">
                             <ul>
-                                <li className="breadcrumb-item"><a href="donation.html#">Home</a></li>
+                                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                                 <li className="breadcrumb-item active">donation approved</li>
                             </ul>
                             </nav>
@@ -58,30 +51,18 @@ export default class DonationApprovalPage extends Component {
                 </div>
             </section>
 
-            <div>
-                { //this.state.loading ? 
-                   // <div>Validating payment.</div> :
-                        //this.state.error ? <div>Error: {this.state.error}</div>
-               // : 
-                <div>
-                    <section className="sa-product-details-section">
-                    <div className="container sa-bg-color">
-                        <div className="row">
-                        <p className="m-4">
-                        <h1>Thank you for making the world a better place!
-                                    You should feeld proud of yourself for donating to a worthly cause!</h1>
-                                    </p>
-                        <div className="weekly-bulletin-iframe">
-                        <img className="pdf-file" src="https://inventionland.com/wp-content/uploads/2015/09/National_Thank_You_Day.png"></img>
-                        </div>
+            <section className="sa-place-section pd-default-3 text-center" ref="selection">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-7">
+                        <div className="sa-section-title text-center">
+                            <h2>We are very thankful.</h2>
+                            <p>We are very thankful for this donation, god bless you for being so generous.</p>
                         </div>
                     </div>
-                
-                </section>
-
-                
-                </div> }
+                </div>
             </div>
+            </section>   
         </div>;
     }
 }
