@@ -24,7 +24,7 @@ class Home extends Component {
                                     <div className="sa-banner-slider">
                                         <div className="mission-statement-text">
                                             <div className="banner-details">
-                                                <h2>St. Luke Catholic Church Mission Statement</h2>
+                                                <h2>Our Mission</h2>
                                                 <p>"Building our lives in the image of Christ through worship and prayer."</p>
                                                 <Link to="/" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
