@@ -61,10 +61,29 @@
     line-height: 50px!important;
 }
 
+.reflection {
+
+    width: 99%; /* of body width */
+
+}
+
+.reflection-title {
+	color: #DEB668;
+
+}
+.reflection-video {
+	padding: 10px;
+	display: inline-block;
+    width: 100%; /* of wrapper width */
+    margin: 5px auto;
+}
 .text-align-left {
 	text-align: left!important;
 }
 
+.text-align-center {
+	text-align: center;
+}
 .mass-schedule-title {
 	text-align: center;
 }

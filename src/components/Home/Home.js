@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Parallax} from 'react-parallax'
 import MassSchedule from '../MassSchedule/MassSchedule'
 import {Link} from 'react-router-dom';
+import Reflection from '../Reflection/Reflection';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -175,71 +176,13 @@ class Home extends Component {
         <section className="sa-schedules-wrap pd-default">
             <div className="container">
                 <div className="sa-schedules-section">
+                <h1 className="text-align-center reflection-title">Today's Reflection</h1>
+
                     <div className="row">
-                        <div className="col-lg-5 col-12">
-                            <div className="sa-schedule">
-                                <div className="sa-schedules-heading">
-                                    <h2>Service Times & Schedules</h2>
-                                    <p>Many desktop publishing packages and the web page editors now use lorem Ipsum as their default model text and a search fornt.</p>
-                                </div>
-                                <div className="sa-schedules-content">
-                                    <p><i className="fa fa-check-circle"></i> Lorem ipsum nullam tortor consequ.</p>
-                                    <p><i className="fa fa-check-circle"></i> Non ullamcorper lobortis incept.</p>
-                                    <p><i className="fa fa-check-circle"></i> Cubilia quisque velit primis rhon.</p>
-                                    <p><i className="fa fa-check-circle"></i> Donec pote libero enim aliquam.</p>
-                                </div>
-                                <a className="btn dark-btn" href="home-4.html#">Contact us</a>
-                            </div>
+                        <div className="reflection">
+                                <Reflection/>
                         </div>
-                        <div className="col-lg-7 col-12">
-                            <table className="table sa-schedules-table">
-                                <thead className="thead-dark">
-                                    <tr>
-                                        <th scope="col">Schedule Day</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Time</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="table-body">
-                                    <tr>
-                                        <th scope="row">Saturday</th>
-                                        <td>Campus - 1</td>
-                                        <td>2:00 PM - 5:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Sunday</th>
-                                        <td>Campus - 1</td>
-                                        <td>4:00 PM - 9:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Monday</th>
-                                        <td>Campus - 3</td>
-                                        <td>9:00 PM - 5:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Tuesday</th>
-                                        <td>Campus - 2</td>
-                                        <td>2:00 PM - 5:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Wednesday</th>
-                                        <td>Campus - 5</td>
-                                        <td>2:00 PM - 5:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Thursday</th>
-                                        <td>Campus - 4</td>
-                                        <td>2:00 PM - 5:45 PM</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Friday</th>
-                                        <td>Campus - 4</td>
-                                        <td>2:00 PM - 5:45 PM</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                   </div>
                 </div>
             </div>
         </section>
