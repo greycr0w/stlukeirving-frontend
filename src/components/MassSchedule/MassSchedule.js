@@ -24,7 +24,7 @@ let styles = {
                                                     <th scope="col">Monday-Saturday</th>
                                                     <th scope="col">Tuesday-Friday</th>
                                                     <th>Saturday</th>
-                                                    <th>Sunday</th>
+                                                    <th className="text-align-left" >Sunday</th>
                                    
                                                 
                                                 </tr>

@@ -61,6 +61,10 @@
     line-height: 50px!important;
 }
 
+.text-align-left {
+	text-align: left!important;
+}
+
 .mass-schedule-title {
 	text-align: center;
 }
