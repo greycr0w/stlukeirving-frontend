@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Parallax} from 'react-parallax'
 import MassSchedule from '../MassSchedule/MassSchedule'
-
+import {Link} from 'react-router-dom';
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -14,19 +14,19 @@ class Home extends Component {
         return(
 
             <div>
-            <Parallax bgImage={process.env.PUBLIC_URL + '/assets/images/bg/banner.png'} strength={1500}>
-                    <div style={{ height: 400 }}>
+            <Parallax bgImage={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} strength={500}>
+                    <div style={{ height: 500 }}>
                     </div>
                     <div className="">
-                        <div className="container">
+                        <div className="container mission-statement">
                             <div className="row justify-content-center">
                                 <div className="col-lg-7 col-12">
                                     <div className="sa-banner-slider">
-                                        <div className="item">
+                                        <div className="mission-statement-text">
                                             <div className="banner-details">
-                                                <h2>St. Luke Irving</h2>
-                                                <p>God cares for you <br></br></p>
-                                                <a href="home-4.html#" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></a>
+                                                <h2>St. Luke Catholic Church Mission Statement</h2>
+                                                <p>"Building our lives in the image of Christ through worship and prayer."</p>
+                                                <Link to="/" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
                                         </div>
                                     </div>

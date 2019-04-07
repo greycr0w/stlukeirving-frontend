@@ -48,8 +48,31 @@
 }
 
 .newsletter-title { 
-	color: white;
+	padding: 10px;
+}
 
+.mission-statement-text .banner-details h2 {
+	font-size: 47px!important;
+    line-height: 56px!important;
+}
+
+.mission-statement-text .banner-details p {
+	font-size: 35px!important;
+    line-height: 50px!important;
+}
+.mission-statement-text {
+	height: 398px;
+    border: 1px solid #012046;
+    background-color: #012046;
+    opacity: 0.8;
+    padding: 20px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+}
+
+.mission-statement {
+
+	margin-left: 8%;
 }
 
 .newsletter-button {
@@ -57,12 +80,12 @@
 }
 .newsletter-form {
 	margin: auto;
-	width: 75%;
+	width: 40%;
 	border: 3px solid #deb668;
 	padding: 10px;
 }
 .newsletter-popup-padding {
-	padding-top: 65px;
+	padding-top: 20px;
 	padding-bottom: 70px;
 }
 .weekly-bulletin-iframe {
@@ -98,6 +121,9 @@
 	border: 0;
 }
 .inline-checkbox {
+	top: 0%!important;
+	outline:none!important;
+	margin-right: 8px;
 	display: inline-block !important;
 }
 
@@ -1045,6 +1071,7 @@ ul.sub-menu:before{
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
+	
 }
 .intro_text {
 	text-align:center;
@@ -6259,6 +6286,9 @@ opacity:1;
 	}
 }
 @media All and (max-width: 991px){
+	.newsletter-form {
+		width: 75%
+	}
 	.sa-schedule-tab .nav-item {
 	    width: 48%;
 	    margin: 1%;

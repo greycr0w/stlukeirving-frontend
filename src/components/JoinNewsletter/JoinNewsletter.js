@@ -24,13 +24,13 @@ const override = css`
 
 let styles = {
 
-    width: '30%',
+    width: '85%',
 
 };
 
 let stylesOverlay = {
 
-    paddingTop: '50px',
+    paddingTop: '20px',
 
 };
 
@@ -122,11 +122,11 @@ class JoinNewsletter extends Component {
 
         return (
 
-            <Popup trigger={<button className="btn dark-btn button"> Join Newsletter </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
+            <Popup trigger={<button className="btn dark-btn button"> Weekly Bulletin </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
             { close =>
             <section className="modal-mass">
             <div className="newsletter-popup-padding" ref="donation">
-            <div className="header"> <h2>Join Newsletter</h2> </div>
+            <div className="header newsletter-title"> <h2>Subscribe to Receive our Weekly Bulletin</h2> </div>
 
                     <div className="newsletter-form donation_form">
                         <form>
@@ -191,7 +191,6 @@ class JoinNewsletter extends Component {
                                         </div>
                                         
                             </div>
-                            <div className="form-group">
                                 
                                     <div className="form-check">
                                                 <Checkbox
@@ -217,7 +216,6 @@ class JoinNewsletter extends Component {
                                     </div>
                              
                                     <a className="btn dark-btn mt-3" onClick={a => this.subscribe(close)} >Join</a>
-                                </div>
                         </form>
                     </div>
                     </div>
