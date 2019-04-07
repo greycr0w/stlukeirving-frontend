@@ -14,53 +14,35 @@ let styles = {
 
                     <section className="modal-mass">
                             <div className="sa-schedules-section">
-                            <div className="header"> <h2>Mass Schedule</h2> </div>
+                            <div className="header"> <h2 className="mass-schedule-title">Mass Schedule</h2> </div>
 
 
                                     <div className=" col-12">
                                         <table className="table sa-schedules-table">
                                             <thead className="thead-dark">
                                                 <tr>
-                                                    <th scope="col">Schedule Day</th>
-                                                    <th scope="col">Location</th>
-                                                    <th scope="col">Time</th>
+                                                    <th scope="col">Monday-Saturday</th>
+                                                    <th scope="col">Tuesday-Friday</th>
+                                                    <th>Saturday</th>
+                                                    <th>Sunday</th>
+                                   
+                                                
                                                 </tr>
                                             </thead>
                                             <tbody className="table-body">
                                                 <tr>
-                                                    <th scope="row">Saturday</th>
-                                                    <td>Campus - 1</td>
-                                                    <td>2:00 PM - 5:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Sunday</th>
-                                                    <td>Campus - 1</td>
-                                                    <td>4:00 PM - 9:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Monday</th>
-                                                    <td>Campus - 3</td>
-                                                    <td>9:00 PM - 5:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Tuesday</th>
-                                                    <td>Campus - 2</td>
-                                                    <td>2:00 PM - 5:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Wednesday</th>
-                                                    <td>Campus - 5</td>
-                                                    <td>2:00 PM - 5:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Thursday</th>
-                                                    <td>Campus - 4</td>
-                                                    <td>2:00 PM - 5:45 PM</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Friday</th>
-                                                    <td>Campus - 4</td>
-                                                    <td>2:00 PM - 5:45 PM</td>
+                                                    <th scope="row">English 6:30 A.M.
+                                                    <br></br>
+                                                    Paraliturgy English 8:00 A.M.
+                                                    </th>
+                                                    <th>Spanish 7:00 P.M.</th>
+                                                    <th>English 5:30 P.M.</th>
+                                                    <th>English: 7:30 A.M. & 11:00 A.M.
+                                                    <br></br>
+                                                    Spanish: 9:00 A.M., 1:00 P.M., 3:00 P.M., & 4:30 P.M.
+                                                    <br></br>
+                                                    Portuguese: 6:00 P.M.
+                                                    </th>
                                                 </tr>
                                             </tbody>
                                         </table>

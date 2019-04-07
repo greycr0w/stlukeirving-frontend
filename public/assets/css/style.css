@@ -60,6 +60,11 @@
 	font-size: 35px!important;
     line-height: 50px!important;
 }
+
+.mass-schedule-title {
+	text-align: center;
+}
+
 .mission-statement-text {
 	height: 398px;
     border: 1px solid #012046;
