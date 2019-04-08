@@ -140,6 +140,16 @@
 	padding: 5px;
 }
 
+.wrapper-bg {
+	width: 100vw;
+	height: 100vh;
+}
+
+.custom-bg {
+	width: 1680px;
+	height: 1200px;
+	object-fit: cover;
+}
 
 .pdf-file {
 	display: block;

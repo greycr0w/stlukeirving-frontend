@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Parallax} from 'react-parallax'
+import {Parallax, Background} from 'react-parallax'
 import MassSchedule from '../MassSchedule/MassSchedule'
 import {Link} from 'react-router-dom';
 import Reflection from '../Reflection/Reflection';
@@ -15,11 +15,13 @@ class Home extends Component {
         return(
 
             <div>
-            <Parallax bgImage={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} strength={250}>
-                    <div style={{ height: 635 }}>
-                    </div>
-                    <div className="">
-                        <div className="container mission-statement">
+            <Parallax strength={400}>
+            <div style={{ height: '635px' }} />
+
+                <Background className="wrapper-bg">
+                    <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} className="custom-bg"/>
+                </Background>
+                         <div className="container mission-statement">
                             <div className="row justify-content-center">
                                 <div className="col-lg-7 col-12">
                                     <div className="sa-banner-slider">
@@ -37,7 +39,6 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </Parallax>
             <div className="sa-upcoming-sermons pd-default-3">
             <div className="container">
