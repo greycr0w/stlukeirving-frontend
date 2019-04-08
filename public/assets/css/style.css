@@ -134,7 +134,7 @@
 }
 .weekly-bulletin-iframe {
 	margin: auto;
-	width: 100%;
+	width: 95%;
 	height: 1250px;
 
 	padding: 5px;
@@ -1575,7 +1575,7 @@ ul.sub-menu:before{
 	padding:0 20px;
 }
 .footer_widget h5 {
-	
+
 }
 .footer_widget p {
 	margin:0 auto 5px;

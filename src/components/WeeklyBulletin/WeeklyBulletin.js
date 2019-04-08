@@ -57,7 +57,7 @@ console.log(this.state);
                     </div>
                    
                     
-                    <div className="col-lg-7 col-md-12">
+                    <div className="col-lg-7 col-md-12 ml-3">
                          
 
                                 <h5 className="mt-3">Download our Weekly Bulletin and be up to date with our newest events.</h5>
