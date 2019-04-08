@@ -15,8 +15,8 @@ class Home extends Component {
         return(
 
             <div>
-            <Parallax strength={400}>
-            <div style={{ height: '635px' }} />
+            <Parallax strength={300}>
+            <div style={{ height: '605px' }} />
 
                 <Background className="wrapper-bg">
                     <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} className="custom-bg"/>
