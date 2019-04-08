@@ -16,7 +16,7 @@ class Header extends Component {
         super(props)
 
         this.state = {
-
+            show: ""
         }
     }
 
@@ -49,7 +49,7 @@ class Header extends Component {
                             </li>
 
                             <li className="dropdown">
-                                <Link to="/weeklybulletin">Weekly Bulletin<span className="nav_arrow">
+                                <Link  to="/weeklybulletin">Weekly Bulletin<span className="nav_arrow">
                                     
                                 </span></Link>
 

@@ -15,7 +15,7 @@ import Events from './components/Events/Events'
 import MassSchedule from './components/MassSchedule/MassSchedule';
 import ServicePayment from './components/ServicePayment/ServicePayment';
 import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/UnsubscribeNewsletter';
-
+import UnderConstruction from './components/UnderConstruction/UnderConstruction'
 
 
 class App extends Component {
@@ -30,8 +30,8 @@ class App extends Component {
 
                     <div>
 						            <Route exact path="/" component={Home} />
-                        <Route path="/donate" component={DonationPage}/>
-                        <Route path="/donation/:id/approve" component={DonationApprovalPage}/>
+                        <Route path="/donate" component={UnderConstruction}/>
+                        <Route path="/donation/:id/approve" component={UnderConstruction}/>
                         <Route path="/weeklybulletin" component={WeeklyBulletin}/>
                         <Route path="/events" component={Events}/>
                         <Route path="/service_payment" component={ServicePayment}/>
