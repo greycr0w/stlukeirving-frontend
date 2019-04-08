@@ -31,9 +31,9 @@ let styles = {
                                             </thead>
                                             <tbody className="table-body">
                                                 <tr>
-                                                    <th scope="row">English 6:30 A.M.
+                                                    <th scope="row">English 6:30 A.M. Paraliturgy 
                                                     <br></br>
-                                                    Paraliturgy English 8:00 A.M.
+                                                    English 8:00 A.M.
                                                     </th>
                                                     <th>Spanish 7:00 P.M.</th>
                                                     <th>English 5:30 P.M.</th>
