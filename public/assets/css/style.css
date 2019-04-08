@@ -101,7 +101,7 @@
 .weekly-bulletin-title {
 
 	text-align: center;
-	padding: 25px 5px;
+	padding: 40px 5px;
 }
 
 .mission-statement-text {
@@ -1561,8 +1561,8 @@ ul.sub-menu:before{
 	cursor: pointer;
 }
 .footer_widget {
-	margin:80px auto 0;
-	padding-bottom:70px;
+	margin:20px auto 0;
+	padding-bottom:20px;
 	border-right:#ebebeb solid 1px;
 }
 .footer_widget:last-child {
@@ -1575,7 +1575,7 @@ ul.sub-menu:before{
 	padding:0 20px;
 }
 .footer_widget h5 {
-	margin: 0 auto 35px;
+	
 }
 .footer_widget p {
 	margin:0 auto 5px;

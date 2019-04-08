@@ -37,7 +37,7 @@ console.log(this.state);
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <h1>Weekly Bulletin</h1>
+
                     </div>
                    
                 </div>

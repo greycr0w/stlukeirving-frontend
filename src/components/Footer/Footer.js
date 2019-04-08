@@ -62,9 +62,17 @@ class Footer extends Component {
                             <p>Fax: 972-259-3339</p>
                         </div>
                     </div>
+
                     <div className="col-md-4 footer_widget">
-                        
+                    <div class="widget_inner">
+
+
+                	    <div class="instagram_img">
+                            <img src={process.env.PUBLIC_URL + '/assets/images/banner/church_footer.jpg'}></img>
+                        </div>
                     </div>
+                    </div>
+
                     <div className="col-md-4 footer_widget">
                         <div className="widget_inner">
                             <h5>Useful Links</h5>
