@@ -6,7 +6,7 @@ class WeeklyBulletin extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pdfFile: null
+            pdfFile: ""
         }
       
     }
