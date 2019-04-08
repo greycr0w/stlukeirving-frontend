@@ -370,7 +370,7 @@ class DonationPage extends Component {
                                             >
 
                                             </Checkbox>
-                                            <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
+                                            <label className="universal-checkbox-label" htmlFor="id1">I agree to receive emails and SMS messages from Saint Luke Catholic Church.
                                         
                                             </label>
                                             {this.state.tac === false && this.state.isMounted == true 

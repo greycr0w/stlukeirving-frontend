@@ -42,7 +42,7 @@ console.log(this.state);
                     <div className="col-md-12">
                         <nav className="breadcrumb">
                         <ul>
-                            <li className="breadcrumb-item"><a href="shop-details.html#">Home</a></li>
+                            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                             <li className="breadcrumb-item active">Weekly Bulletin</li>
 
                         </ul>
@@ -68,24 +68,13 @@ console.log(this.state);
                     
                     <div className="col-lg-7 col-md-12">
                         <div className="sa-single-product-details-area">
-                            <div className="sa-single-product-details-social">
-                                <ul>
-                                    <li><a href="shop-details.html#"><i className="fa fa-share-alt"></i></a></li>
-                                    <li><a href="shop-details.html#"><i className="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
+                         
                             <div className="sa-single-product-details">
+
+                                <h1>Download our Weekly Bulletin and be up to date with our newest events.</h1>
+                            
                                 {this.state.pdfFile ? <a href={this.state.pdfFile.file.access_url} className="btn btn-lg dark-btn mt-3">Download</a> : null}
 
-                                <h2>Download our Weekly Bulletin, and be up to date with our newest events.</h2>
-
-                                <br></br>
-                                <br></br>
-                                <br></br>
-                                <div className="mt-5">
-                                <h5>Short Description</h5>
-                                <p>This is Weekly Bulletin, in this PDF</p>
-                                </div>
                             </div>
                         </div>
                     </div>

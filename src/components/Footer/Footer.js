@@ -32,14 +32,13 @@ class Footer extends Component {
                         <div className="col-md-4 top_widget newsletter-button">
                         <JoinNewsletter></JoinNewsletter>
                         </div>
-                        <div className="col-md-4 top_widget">
+                        <div className="col-md-3 top_widget">
                             <div className="follow_us">
                                 <ul>
-                                    <li><a href="home-4.html#"><i className="fa fa-facebook"></i></a></li>
-                                    <li><a href="home-4.html#"><i className="fa fa-twitter"></i></a></li>
-                                    <li><a href="home-4.html#"><i className="fa fa-linkedin"></i></a></li>
-                                    <li><a href="home-4.html#"><i className="fa fa-youtube-play"></i></a></li>
-                                    <li><a href="home-4.html#"><i className="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.facebook.com/St-Luke-Catholic-Church-Irving-Texas-1703729443281316/?__tn__=%2Cd%2CP-R&eid=ARCn1z2oAz52DN5bdoPd_TxPF0tWM0by8Q65EUf6bf8uwPAaMBZPkyfS0v_wUqlH289v0_FyJ4gaxePG"><i className="fa fa-2x fa-facebook"></i></a></li>
+                                    <li><a href="https://www.facebook.com/St-Luke-Catholic-Church-Irving-Texas-1703729443281316/?__tn__=%2Cd%2CP-R&eid=ARCn1z2oAz52DN5bdoPd_TxPF0tWM0by8Q65EUf6bf8uwPAaMBZPkyfS0v_wUqlH289v0_FyJ4gaxePG"><i className="fa fa-2x fa-youtube"></i></a></li>
+                                    <li><a href="https://www.facebook.com/St-Luke-Catholic-Church-Irving-Texas-1703729443281316/?__tn__=%2Cd%2CP-R&eid=ARCn1z2oAz52DN5bdoPd_TxPF0tWM0by8Q65EUf6bf8uwPAaMBZPkyfS0v_wUqlH289v0_FyJ4gaxePG"><i className="fa fa-2x fa-instagram"></i></a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -55,26 +54,12 @@ class Footer extends Component {
                         <div className="widget_inner">
                             <h5>Contact Us</h5>
                             <p>Address: 202 S. MacArthur Blvd Irving, Texas 75060</p>
-                            <p>Email:  <a href="mailto:support@stlukeirving.org">support@stlukeirving.org</a></p>
+                            <p>Email:  <a href="mailto:contact@stlukeirving.org">conatct@stlukeirving.org</a></p>
                             <p>Phone:  972-259-3222	</p>
                         </div>
                     </div>
                     <div className="col-md-4 footer_widget">
-                        <div className="widget_inner">
-                            <div className="instagram_img">
-                                <ul>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/01.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/02.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/03.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/04.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/05.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/06.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/07.jpg" alt="image"></img></a></li>
-                                    <li><a href="home-4.html#"><img src="assets/images/feed/charity/08.jpg" alt="image"></img></a></li>
-                                </ul>
-                                <a href="home-4.html#" className="insta_url"><i className="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div className="col-md-4 footer_widget">
                         <div className="widget_inner">

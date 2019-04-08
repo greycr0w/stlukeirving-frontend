@@ -9,7 +9,6 @@ import {Redirect} from 'react-router-dom';
 import {Alert} from 'reactstrap';
 import ReactFitText from 'react-fittext';
 import axios from 'axios';
-import { ClipLoader } from 'react-spinners';
 import { css } from '@emotion/core';
 
 import Swal from 'sweetalert2';
@@ -59,9 +58,9 @@ class JoinNewsletter extends Component {
                 
                 console.log(response.data);
 
-                var us = response.data.filter(a=>a.key == "US")[0];
-                var active_id = (us && us.id) || response.data[0].id;
-                this.setState({countries: response.data, active_id})
+                // var us = response.data.filter(a=>a.key == "US")[0];
+                // var active_id = (us && us.id) || response.data[0].id;
+                this.setState({countries: response.data})
 
             })
             .catch(function (response) {
@@ -113,16 +112,22 @@ class JoinNewsletter extends Component {
         this.setState({[event.target.name]: event.target.value});
     }
 
+    handlePhoneChange(e) {
+        this.setState({phone: e.value})
+    }
+
     handleTakChange(e) {
         this.setState({tak: e})
     }
 
     render() {
        
+        console.log(this.state.phone);
+        console.log(this.state.active_id);
 
         return (
 
-            <Popup trigger={<button className="btn dark-btn button"> Weekly Bulletin </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
+            <Popup trigger={<button className="btn dark-btn button weekly-bulletin-subscribe-button"> Weekly Bulletin <br></br> Subscribe </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
             { close =>
             <section className="modal-mass">
             <div className="newsletter-popup-padding" ref="donation">
@@ -165,7 +170,8 @@ class JoinNewsletter extends Component {
                                         <div className="row mt-3">
                                            
                                            <div className="col-sm-12">
-                                               <input type="email" className="form-control border" placeholder="Phone number" name="phone" value={this.state.phone} onChange={this.handleChange.bind(this)}></input>
+                                           
+                                           <NumberFormat placeholder="Cellphone number" className="form-control border"   value={this.state.phone} format="+1 (###) ###-####" mask="_" onValueChange={this.handlePhoneChange.bind(this)}/>
                                                {(!this.state.phone || !this.state.phone.length) && this.state.isMounted == true 
                                                ?
                                                <Errors errors="Phone number is required."/>
@@ -180,7 +186,8 @@ class JoinNewsletter extends Component {
                                            <div className="col-sm-12">
                                            
                                                <select className="select form-control border" onChange={a => this.setState({ active_id: a.target.value })} value={this.state.active_id}>
-                                               {this.state.countries.map((country) => { 
+                                               <option value="" disabled selected>Country of birth</option>
+                                                {this.state.countries.map((country) => { 
                                                    return (
                                                <option key={country.id} value={country.id}>{country.name}</option>
 
@@ -204,7 +211,7 @@ class JoinNewsletter extends Component {
                                                 >
                                                 </Checkbox>
                                              
-                                        <label className="newsletter-checkbox-label" htmlFor="id1">I agree to receive emails and text messages on my phone number.
+                                        <label className="newsletter-checkbox-label" htmlFor="id1">I agree to receive emails and SMS messages from Saint Luke Catholic Church.
                                                 
                                                 </label>
                                                     {this.state.tak === false && this.state.isMounted == true 

@@ -15,8 +15,8 @@ class Home extends Component {
         return(
 
             <div>
-            <Parallax bgImage={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} strength={500}>
-                    <div style={{ height: 500 }}>
+            <Parallax bgImage={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} strength={250}>
+                    <div style={{ height: 635 }}>
                     </div>
                     <div className="">
                         <div className="container mission-statement">
@@ -26,7 +26,7 @@ class Home extends Component {
                                         <div className="mission-statement-text">
                                             <div className="banner-details">
                                                 <h2>Our Mission</h2>
-                                                <p>"Building our lives in the image of Christ through worship and prayer."</p>
+                                                <p>Building our lives in the image of Christ through worship and prayer.</p>
                                                 <Link to="/" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
                                         </div>
