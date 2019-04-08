@@ -37,46 +37,33 @@ console.log(this.state);
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                    <h1>Weekly Bulletin</h1>
+                        <h1>Weekly Bulletin</h1>
                     </div>
-                    <div className="col-md-12">
-                        <nav className="breadcrumb">
-                        <ul>
-                            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                            <li className="breadcrumb-item active">Weekly Bulletin</li>
-
-                        </ul>
-                        </nav>
-                    </div>
+                   
                 </div>
             </div>
         </section>
 
 
-
         <section className="sa-product-details-section">
             <div className="container sa-bg-color">
                 <div className="row">
-                <div className="weekly-bulletin-iframe">
-                {this.state.pdfFile ? <iframe className="pdf-file" src={this.state.pdfFile.file.access_url}></iframe> : null}
-                </div>
-                    <div className="col-lg-5 col-md-12">
-                        <div className="row justify-content-center text-center">
+                <h1 className="weekly-bulletin-title">Weekly Bulletin</h1>
 
-                        </div>
+                    <div className="weekly-bulletin-iframe">
+        
+                        {this.state.pdfFile ? <iframe className="pdf-file" src={this.state.pdfFile.file.access_url}></iframe> : null}
+
                     </div>
+                   
                     
                     <div className="col-lg-7 col-md-12">
-                        <div className="sa-single-product-details-area">
                          
-                            <div className="sa-single-product-details">
 
-                                <h1>Download our Weekly Bulletin and be up to date with our newest events.</h1>
+                                <h5 className="mt-3">Download our Weekly Bulletin and be up to date with our newest events.</h5>
                             
-                                {this.state.pdfFile ? <a href={this.state.pdfFile.file.access_url} className="btn btn-lg dark-btn mt-3">Download</a> : null}
+                                {this.state.pdfFile ? <a href={this.state.pdfFile.file.access_url} className="btn btn-sm dark-btn mt-3 mb-3">Download</a> : null}
 
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

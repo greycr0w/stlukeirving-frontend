@@ -158,23 +158,20 @@ class DonationPage extends Component {
         return (
             <div>
            
-            <section className="sa-page-title text-left">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                        <h1>Donation Page</h1>
-                        </div>
-                        <div className="col-md-12">
-                            <nav className="breadcrumb">
-                            <ul>
-                                <li className="breadcrumb-item"><a href="donation.html#">Home</a></li>
-                                <li className="breadcrumb-item active">Donation Page</li>
-                            </ul>
-                            </nav>
-                        </div>
+           <section className="sa-page-title donation text-center">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <h1>Donation</h1>
                     </div>
+                   
                 </div>
-            </section>
+            </div>
+        </section>
+
+
+
+            
             <section className="sa-place-section pd-default-3 text-center" ref="selection">
             <div className="container">
                 <div className="row justify-content-center">
