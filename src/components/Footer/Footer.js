@@ -25,7 +25,7 @@ class Footer extends Component {
                         <div className="col-md-4 top_widget">
                             <div className="footer_logo">
                                 <div className="footer-logo-wrapper">
-                                    <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/stluke-logo.png'} alt="image"></img>
+                                    <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/bg/newstluke.png'} alt="image"></img>
                                 </div>
                             </div>
                         </div>

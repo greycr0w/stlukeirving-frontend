@@ -20,6 +20,7 @@ class Home extends Component {
 
                 <Background className="wrapper-bg">
                     <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} className="custom-bg"/>
+                  
                 </Background>
                          <div className="container mission-statement">
                             <div className="row justify-content-center">
@@ -46,7 +47,7 @@ class Home extends Component {
                 
                     <div className="col-lg-7 col-12">
                
-                        <h2 className="sa-video-title">Upcoming Sermons</h2>
+                        <h2 className="sa-video-title">Upcoming Events</h2>
                         
                         <div className="sa-events-area">
                             <div className="media">
@@ -132,7 +133,7 @@ class Home extends Component {
         </div>
         
 
-        
+{/*         
         <section id="causes" className="section-padding gray_bg">
             <div className="container">
                 <div className="owl-carousel">
@@ -168,25 +169,39 @@ class Home extends Component {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
         
 
-       
+        <Parallax strength={300}>
 
-        
-        <section className="sa-schedules-wrap pd-default">
-            <div className="container">
-                <div className="sa-schedules-section">
-                <h1 className="text-align-center reflection-title">Today's Reflection</h1>
-
-                    <div className="row">
-                        <div className="reflection">
-                                <Reflection/>
+                <Background className="wrapper-bg ">
+                    <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Full.jpg'} className="custom-bg"/>
+                    <div className="reflection-bg">
+                            &nbsp;
                         </div>
-                   </div>
-                </div>
-            </div>
-        </section>
+                </Background>
+                <section className="pd-default ">
+
+                        <div className="container visibility-reflection">
+                            <div className="sa-schedules-section">
+                            <h1 className="text-align-center reflection-title">Today's Reflection</h1>
+
+                                <div className="row">
+                                    <div className="reflection">
+                                            <Reflection/>
+                                    </div>
+                            </div>
+                          
+                            </div>
+                            
+                        </div>
+                       
+                        
+                        </section>
+                        
+                </Parallax>
+
+     
 
 
         </div>    
