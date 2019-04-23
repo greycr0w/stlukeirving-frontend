@@ -56,6 +56,17 @@ class Header extends Component {
                             </li>
 
                             <li className="dropdown">
+                                <Link to="/">Our Community<span className="nav_arrow">
+                                    
+                                </span></Link>
+                                <ul className="sub-menu">
+                                        <li><Link to="/">History</Link></li>
+                                        <li><Link to="/">Information</Link></li>
+                                    
+                                </ul>
+                            </li>
+
+                            <li className="dropdown">
                                 <Link to="/">Formation<span className="nav_arrow">
                                     
                                 </span></Link>
@@ -73,16 +84,6 @@ class Header extends Component {
                                 </ul>
                             </li>
 
-                            <li className="dropdown">
-                                <Link to="/">Our Community<span className="nav_arrow">
-                                    
-                                </span></Link>
-                                <ul className="sub-menu">
-                                        <li><Link to="/">History</Link></li>
-                                        <li><Link to="/">Information</Link></li>
-                                    
-                                </ul>
-                            </li>
 
                             <li className="dropdown">
                                 <Link to="/">Parish<span className="nav_arrow">

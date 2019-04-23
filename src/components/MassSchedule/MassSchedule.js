@@ -10,7 +10,7 @@ let styles = {
   };
   
   export default () => (
-    <Popup trigger={<button className="btn dark-btn button"> Mass Schedule </button>} contentStyle={styles}modal>
+    <Popup trigger={<button>MAss </button>} contentStyle={styles}modal>
 
                     <section className="modal-mass">
                             <div className="sa-schedules-section">

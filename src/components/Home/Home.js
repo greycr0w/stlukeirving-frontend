@@ -41,6 +41,25 @@ class Home extends Component {
                             </div>
                         </div>
                 </Parallax>
+
+
+          
+                        <section className="section-class">
+                            <MassSchedule>
+                                <div className="visual">
+                                    <img src={process.env.PUBLIC_URL + '/assets/images/squ-1.jpg'} alt="Choir &amp; Orchestra"></img>
+                         
+                                </div>
+                                <div className="text">
+                                    <h3 className="title">Mass schedule</h3>
+                                    <p className="times">
+                                        <span className="day">Sundays</span><br></br>
+                                        9:15 &amp; 10:50am CT<br></br>
+                                        <span className="emphasized sm alt">Learn More</span>
+                                    </p>
+                                </div>
+                            </MassSchedule>
+                        </section>
             <div className="sa-upcoming-sermons pd-default-3">
             <div className="container">
                 <div className="row">
@@ -90,44 +109,10 @@ class Home extends Component {
                         </div>
                     </div>
                     
-                    <div className="col-lg-5 col-md-12">
-                    <h2 className="sa-video-title">See our Mass Schedule</h2>
-
-                    <h2 className="sa-video-title"> <MassSchedule></MassSchedule></h2>
+                  
                    
 
-                        <h2 className="sa-video-title">Previous Sermons</h2>
-                        <div className="sa-video-block mg-bottom-30">
-                            <div className="video-blog">
-                                <div className="video-blog-popup">
-                                    <div className="thumb">
-                                        <img src="assets/images/sermons/01.png" alt="img"></img>
-                                    </div>
-                                    <a className="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i className="fa fa-play"></i></a>
-                                </div>
-                                <div className="video-content text-center">
-                                    <h5>Living A Christian Life</h5>
-                                    <p>Joint 985 People  |  40:20 Munites</p>
-                                    <a href="home-4.html#" className="btn dark-btn">Watch Sermon</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="sa-video-block">
-                            <div className="video-blog">
-                                <div className="video-blog-popup">
-                                    <div className="thumb">
-                                        <img src="assets/images/sermons/02.png" alt="img"></img>
-                                    </div>
-                                    <a className="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i className="fa fa-play"></i></a>
-                                </div>
-                                <div className="video-content text-center">
-                                    <h5>Donation is the social work</h5>
-                                    <p>Joint 985 People  |  40:20 Munites</p>
-                                    <a href="home-4.html#" className="btn dark-btn">Watch Sermon</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                      
                 </div>
             </div>
         </div>
