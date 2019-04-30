@@ -32,17 +32,17 @@ class WeeklyBulletin extends Component {
     render() {
 console.log(this.state);
         return(
-            <div>
+        <div>
             <section className="sa-page-title donation text-center">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
 
+                        </div>
+                    
                     </div>
-                   
                 </div>
-            </div>
-        </section>
+            </section>
 
 
         <section className="sa-product-details-section">

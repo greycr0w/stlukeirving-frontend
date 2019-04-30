@@ -15,8 +15,8 @@ import Events from './components/Events/Events'
 import MassSchedule from './components/MassSchedule/MassSchedule';
 import ServicePayment from './components/ServicePayment/ServicePayment';
 import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/UnsubscribeNewsletter';
-import UnderConstruction from './components/UnderConstruction/UnderConstruction'
-
+import UnderConstruction from './components/UnderConstruction/UnderConstruction';
+import History from './components/OurCommunity/History';
 
 class App extends Component {
   render() {
@@ -36,6 +36,7 @@ class App extends Component {
                         <Route path="/events" component={Events}/>
                         <Route path="/service_payment" component={ServicePayment}/>
                         <Route path="/unsubscribe" component={UnsubscribeNewsletter}/>
+                        <Route path="/history" component={History}/>
 
                         
                     </div>
