@@ -22,6 +22,12 @@
 	1. General code
 ==========================*/
 
+.feed grid {
+	position: absolute;
+	margin: 0 auto;
+
+}
+
 .donation-box {
 	cursor:pointer;
 	border:solid 1px #ccc;
@@ -43,166 +49,6 @@
     opacity: .6;
 }
 
-.feed.grid {
-    margin: 0 -10px;
-    text-align: center;
-}
-#experiences {
-    padding: 3.75em 0 1.5em;
-}
-.section-links {
-    padding: 6.75em 0 6em;
-	text-align: center;
-}
-#experiences .container {
-    max-width: 1140px;
-}
-.section-links .container>h2 {
-    text-transform: uppercase;
-}
-#experiences .container>h2 {
-    margin-bottom: .75em;
-}
-
-.no-bleed .container>h2 {
-	
-	margin: 0;
-	text-align: center;
-}
-#document>section .container>h2 {
-    text-transform: uppercase;
-}
-#experiences .feed.grid section {
-    position: relative;
-}
-@media (min-width: 861px) {
-	.feed.grid section {
-		width: 33.33%;
-	}
-}
-.feed.grid .section-class {
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 1.5em;
-    padding: 0 10px;
-    width: 33%;
-    text-align: center;
-}
-
-.feed section>a {
-    display: block;
-}
-
-#experiences .feed.grid .visual {
-    position: relative;
-    z-index: 1;
-    background-color: #000;
-}
-.feed.grid .visual {
-    margin-bottom: .75em;
-}
-
-#experiences .feed.grid .times, #experiences .feed.grid .visual img {
-    transition: all .36s;
-    -moz-transition: all .36s;
-    -ms-transition: all .36s;
-    -o-transition: all .36s;
-    -webkit-transition: all .36s;
-}
-
-#experiences .feed.grid .visual img {
-    opacity: 1;
-}
-.feed.grid .visual img {
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-.feed img {
-    width: 100%;
-    display: block;
-}
-
-.feed .text {
-    overflow: hidden;
-}
-
-#experiences .feed.grid .title {
-    letter-spacing: .15em;
-}
-.feed.grid section .text h1, .feed.grid section .text>.title {
-    text-transform: uppercase;
-    letter-spacing: .3em;
-    text-indent: .3em;
-}
-.feed .text h1, .feed .text>.title {
-    font-size: 1em;
-    line-height: 1.125em;
-    margin-top: 0;
-    margin-bottom: .375em;
-    font-weight: 600;
-}
-
-#experiences .feed.grid .times, #experiences .feed.grid .visual img {
-    transition: all .36s;
-    -moz-transition: all .36s;
-    -ms-transition: all .36s;
-    -o-transition: all .36s;
-    -webkit-transition: all .36s;
-}
-#experiences .feed.grid .times {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    margin: 0;
-    padding: 0 1.5em;
-    opacity: 0;
-    color: #FFF;
-    transform: translateY(-175%);
-    -moz-transform: translateY(-175%);
-    -ms-transform: translateY(-175%);
-    -o-transform: translateY(-175%);
-    -webkit-transform: translateY(-175%);
-}
-
-#experiences .feed.grid .day {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.emphasized.alt {
-    color: #FFF;
-}
-.emphasized.sm {
-    font-size: .75em;
-    line-height: 1.5em;
-    margin: 0;
-    padding: .66em 2em;
-}
-
-
-.emphasized {
-    font-size: .9em;
-    line-height: 1.25em;
-    margin: 0;
-    padding: .83333em 1.66667em;
-    min-width: 10em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-indent: .2em;
-    cursor: pointer;
-    font-weight: 600;
-    letter-spacing: .2em;
-    display: inline-block;
-    border: 2px solid;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
 
 
 .mnu_slide:active {

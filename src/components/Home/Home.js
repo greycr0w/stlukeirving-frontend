@@ -36,7 +36,7 @@ class Home extends Component {
         return(
 
             <div>
-            <Parallax strength={300}>
+            <Parallax strength={600}>
             <div style={{ height: '635px' }} />
 
                 <Background className="wrapper-bg">
@@ -51,7 +51,7 @@ class Home extends Component {
                                             <div className="banner-details">
                                                 <h2>Our Mission</h2>
                                                 <p>{this.state.bannerText}</p>
-                                                <Link to="/" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
+                                                <Link to="/history" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -62,25 +62,31 @@ class Home extends Component {
                             </div>
                         </div>
                 </Parallax>
+            {/* <div className="container">
+                <div className="section-padding">
+                    <div className="row">
+                        <div className="col-lg-3 col-sm-6">
+                            <div className="home_squares_wrapper">
+                                <MassSchedule></MassSchedule>
+                            </div>
+                        </div>
+                        <div className="col-lg-3 col-sm-6">
+
+                            <button>two</button>
+                        </div>
+                        <div className="col-lg-3 col-sm-6">
+
+                            <button>two</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+                    */}
 
 
-          
-                        <section className="section-class">
-                            <MassSchedule>
-                                <div className="visual">
-                                    <img src={process.env.PUBLIC_URL + '/assets/images/squ-1.jpg'} alt="Choir &amp; Orchestra"></img>
-                         
-                                </div>
-                                <div className="text">
-                                    <h3 className="title">Mass schedule</h3>
-                                    <p className="times">
-                                        <span className="day">Sundays</span><br></br>
-                                        9:15 &amp; 10:50am CT<br></br>
-                                        <span className="emphasized sm alt">Learn More</span>
-                                    </p>
-                                </div>
-                            </MassSchedule>
-                        </section>
+                        
             <div className="sa-upcoming-sermons pd-default-3">
             <div className="container">
                 <div className="row">
