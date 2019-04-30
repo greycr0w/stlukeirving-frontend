@@ -91,7 +91,7 @@ class Header extends Component {
                                 </span></Link>
                                 <ul className="sub-menu">
                                         <li><Link to="/">Parish Groups</Link></li>
-                                        <li><Link to="/">Parish Staff</Link></li>
+                                        <li><Link to="/parish_staff">Parish Staff</Link></li>
 
                                 </ul>
                             </li>

@@ -17,7 +17,7 @@ import ServicePayment from './components/ServicePayment/ServicePayment';
 import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/UnsubscribeNewsletter';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import History from './components/OurCommunity/History';
-
+import ParishStaff from './components/Parish/ParishStaff';
 class App extends Component {
   render() {
 
@@ -37,7 +37,7 @@ class App extends Component {
                         <Route path="/service_payment" component={ServicePayment}/>
                         <Route path="/unsubscribe" component={UnsubscribeNewsletter}/>
                         <Route path="/history" component={History}/>
-
+                        <Route path="/parish_staff" component={ParishStaff}/>
                         
                     </div>
         <Footer></Footer>

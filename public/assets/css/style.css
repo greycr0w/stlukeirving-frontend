@@ -2812,8 +2812,8 @@ ul.sermons_meta {
 	text-align:center;
 	overflow:hidden;
 	width:130px;
-	height:130px;
-	border-radius:50%;
+	height:105px;
+	border-radius:15%;
 	margin:0 auto 12px;
 	position:relative;
 }
