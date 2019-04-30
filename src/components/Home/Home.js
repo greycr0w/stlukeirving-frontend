@@ -3,12 +3,33 @@ import {Parallax, Background} from 'react-parallax'
 import MassSchedule from '../MassSchedule/MassSchedule'
 import {Link} from 'react-router-dom';
 import Reflection from '../Reflection/Reflection';
+import axios from 'axios';
 class Home extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
+            bannerText: "",
+            bannerImg: ""
         }
+    }
+
+    componentDidMount() {
+        axios({ method: 'get',
+        url: 'https://api.stlukeirving.org/banner_group/1/banner',
+        })
+        .then( (response) => {
+            
+            var banner = response.data[ Math.floor( Math.random() * response.data.length)  ];
+
+            this.setState({bannerText: banner.values[1].text_content})
+            this.setState({bannerImg: banner.values[0].media.access_url})
+
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
     }
 
     render() {
@@ -19,7 +40,7 @@ class Home extends Component {
             <div style={{ height: '635px' }} />
 
                 <Background className="wrapper-bg">
-                    <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Altar.jpg'} className="custom-bg"/>
+                    <img src={this.state.bannerImg} className="custom-bg"/>
                   
                 </Background>
                          <div className="container mission-statement">
@@ -29,7 +50,7 @@ class Home extends Component {
                                         <div className="mission-statement-text">
                                             <div className="banner-details">
                                                 <h2>Our Mission</h2>
-                                                <p>Building our lives in the image of Christ through worship and prayer.</p>
+                                                <p>{this.state.bannerText}</p>
                                                 <Link to="/" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
                                         </div>
