@@ -71,8 +71,8 @@ function ParishStaff() {
                                     <img src="assets/images/pastor/Erika_horiz.jpg" alt="image"></img>
                                 </div>
                                 <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
-                                <h6>Erika</h6>
-                                <p>Deacon</p>
+                                <h6>Erika Zepeda Sandoval</h6>
+                                <p>Secretary</p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-sm-6">
