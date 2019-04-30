@@ -18,6 +18,9 @@ import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/Unsubscrib
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import History from './components/OurCommunity/History';
 import ParishStaff from './components/Parish/ParishStaff';
+import Information from './components/OurCommunity/Information';
+
+
 class App extends Component {
   render() {
 
@@ -38,6 +41,7 @@ class App extends Component {
                         <Route path="/unsubscribe" component={UnsubscribeNewsletter}/>
                         <Route path="/history" component={History}/>
                         <Route path="/parish_staff" component={ParishStaff}/>
+                        <Route path="/information" component={Information}/>
                         
                     </div>
         <Footer></Footer>

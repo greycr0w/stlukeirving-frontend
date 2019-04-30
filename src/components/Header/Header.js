@@ -61,7 +61,7 @@ class Header extends Component {
                                 </span></Link>
                                 <ul className="sub-menu">
                                         <li><Link to="/history">History</Link></li>
-                                        <li><Link to="/">Information</Link></li>
+                                        <li><Link to="/information">Information</Link></li>
                                     
                                 </ul>
                             </li>

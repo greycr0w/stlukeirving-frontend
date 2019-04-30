@@ -28,6 +28,10 @@
 
 }
 
+
+.event-image {
+	width: 400px;
+}
 .donation-box {
 	cursor:pointer;
 	border:solid 1px #ccc;
@@ -2500,7 +2504,7 @@ ul.sermons_meta {
 =====================*/
 .contact_wrap {
 	margin:0 auto;
-	max-width:950px;
+	max-width:760px;
 	border: #f2f2f2 solid 1px;
 	box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 10px;
 }

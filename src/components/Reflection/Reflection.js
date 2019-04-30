@@ -5,28 +5,41 @@ import axios from 'axios';
 
 function Reflection() {
     const [data, setData] = useState("");
-    const videoUrl = "https://www.youtube.com/watch?v=OlJY7IGLyFQ&list=PLpTzvCOJa7DAoMqHc4moKtTJSI6gsth32&index=7";
     const opts = {
         height: '600',
         width: '800',
-        playerVars: { // https://developers.google.com/youtube/player_parameters
+        playerVars: { 
           autoplay: 0
         }
       };
-    //TODO: implement when api is ready
-    // useEffect(async () => {
-    //     const result = await axios(
-    //       '',
-    //     );
-    
-    //     setData(result.data);
-    //   });
+
+    useEffect(() => {
+        async function fetchData(){
+
+          var result = await axios({ method: 'get',
+            url: 'https://api.stlukeirving.org/reflection',
+          })
+          .then( (response) => {
+
+              
+              console.log(response.data)
+              return response.data
+              
+          });
+
+
+          setData(result);
+
+        }
+        fetchData()
+        
+      });
     
 
     return(
 
         <YouTube
-        videoId="OlJY7IGLyFQ"
+        videoId={data || ""}
         opts={opts}
         className="reflection-video"
         />

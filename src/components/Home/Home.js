@@ -10,7 +10,8 @@ class Home extends Component {
 
         this.state = {
             bannerText: "",
-            bannerImg: ""
+            bannerImg: "",
+            event: []
         }
     }
 
@@ -30,6 +31,18 @@ class Home extends Component {
             //handle error
             console.log(response);
         });
+
+        axios({ method: 'get',
+        url: 'https://saintlukecatholicchurch.mhsoftware.com/jsonp/calendar_id/2.js?dayspan=7',
+        })
+        .then( (response) => {
+
+            this.setState({event: response.data.items})
+            console.log(response.data.items)
+        }
+        );
+
+      
     }
 
     render() {
@@ -94,46 +107,24 @@ class Home extends Component {
                     <div className="col-lg-7 col-12">
                
                         <h2 className="sa-video-title">Upcoming Events</h2>
+                        {this.state.event.map(a => (
+                            <div className="sa-events-area">
+                            <div className="media">
+
+                                <img src={a.attachments[0].url} className="event-image" alt="Event image"></img>
+                                <div className="media-body sa-event">
+                                    <h5>{a.description}</h5>
+                                    <p>{a.long_description}</p>
+                                    <div className="sa-events">
+                                        <p><i className="fa fa-clock-o"></i>{a.starting_date + " " + a.starting_time}</p>
+                                        <p><i className="fa fa-map-marker"></i>{a.location.location_name}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        )) }
                         
-                        <div className="sa-events-area">
-                            <div className="media">
-                                <img src="assets/images/event2/1.jpg" alt="Event image"></img>
-                                <div className="media-body sa-event">
-                                    <h5>God is always with you on believe.</h5>
-                                    <p>You need to be sure there isn't anything embarrassing hidden in the middle of text</p>
-                                    <div className="sa-events">
-                                        <p><i className="fa fa-clock-o"></i>Sunday  (8:00 am — 9:00 am)</p>
-                                        <p><i className="fa fa-map-marker"></i>56 Thatcher Avenue River Forest</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="sa-events-area sa-events-area-2">
-                            <div className="media">
-                                <img src="assets/images/event2/2.jpg" alt="Event image"></img>
-                                <div className="media-body sa-event">
-                                    <h5>The power of giving thanks </h5>
-                                    <p>You need to be sure there isn't anything embarrassing hidden in the middle of text</p>
-                                    <div className="sa-events">
-                                        <p><i className="fa fa-clock-o"></i>Sunday  (8:00 am — 9:00 am)</p>
-                                        <p><i className="fa fa-map-marker"></i>56 Thatcher Avenue River Forest</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="sa-events-area sa-events-area-2">
-                            <div className="media">
-                                <img src="assets/images/event2/3.jpg" alt="Event image"></img>
-                                <div className="media-body sa-event">
-                                    <h5>Learn helping without hurting</h5>
-                                    <p>You need to be sure there isn't anything embarrassing hidden in the middle of text</p>
-                                    <div className="sa-events">
-                                        <p><i className="fa fa-clock-o"></i>Sunday  (8:00 am — 9:00 am)</p>
-                                        <p><i className="fa fa-map-marker"></i>56 Thatcher Avenue River Forest</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                     
                   
