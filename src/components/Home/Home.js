@@ -4,6 +4,7 @@ import MassSchedule from '../MassSchedule/MassSchedule'
 import {Link} from 'react-router-dom';
 import Reflection from '../Reflection/Reflection';
 import axios from 'axios';
+import {Container, Row, Col} from 'reactstrap'
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -74,6 +75,21 @@ class Home extends Component {
                             </div>
                         </div>
                 </Parallax>
+
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-sm text-align-center">
+                        <button className="btn dark-btn">data</button>
+                        </div>
+                        <div class="col-smn text-align-center">
+                        <MassSchedule></MassSchedule>
+                        </div>
+                        <div class="col-sm text-align-center">
+                        <button className="btn dark-btn">data</button>
+                        </div>
+                    </div>
+                </div>
+
             {/* <div className="container">
                 <div className="section-padding">
                     <div className="row">
