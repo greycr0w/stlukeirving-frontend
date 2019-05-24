@@ -76,17 +76,22 @@ class Home extends Component {
                         </div>
                 </Parallax>
 
-                <div class="container mt-3">
-                    <div class="row">
-                        <div class="col-sm text-align-center">
-                        <button className="btn dark-btn">data</button>
-                        </div>
-                        <div class="col-smn text-align-center">
-                        <MassSchedule></MassSchedule>
-                        </div>
-                        <div class="col-sm text-align-center">
-                        <button className="btn dark-btn">data</button>
-                        </div>
+                <div className="container mt-5">
+                    <div className="row">
+                        <a href="//httpbin.org" target="_blank" className="d-block col-md-4 main-card">
+                            <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
+                            <h4>Calendar</h4>
+                        </a>
+                        <MassSchedule>
+                            <a className="col-md-4 main-card">
+                                <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
+                                <h4>Mass Schedule</h4>
+                            </a>
+                        </MassSchedule>
+                        <a href="#" className="d-block col-md-4 main-card">
+                            <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
+                            <h4>Formation</h4>
+                        </a>
                     </div>
                 </div>
 
