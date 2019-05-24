@@ -111,7 +111,7 @@ class Home extends Component {
                             <div className="sa-events-area">
                             <div className="media">
 
-                                <img src={a.attachments[0].url} className="event-image" alt="Event image"></img>
+                                { (a.attachments[0] && <img src={a.attachments[0].url} className="event-image" alt="Event image"></img>) || null }
                                 <div className="media-body sa-event">
                                     <h5>{a.description}</h5>
                                     <p>{a.long_description}</p>
