@@ -33,12 +33,11 @@ class Home extends Component {
         });
 
         axios({ method: 'get',
-        url: 'https://saintlukecatholicchurch.mhsoftware.com/jsonp/calendar_id/2.js?dayspan=7',
+        url: 'https://saintlukecatholicchurch.mhsoftware.com/jsonp/calendar_id/2.js?dayspan=8',
         })
         .then( (response) => {
 
             this.setState({event: response.data.items})
-            console.log(response.data.items)
         }
         );
 
@@ -111,13 +110,13 @@ class Home extends Component {
                             <div className="sa-events-area">
                             <div className="media">
 
-                                { (a.attachments[0] && <img src={a.attachments[0].url} className="event-image" alt="Event image"></img>) || null }
+                                { a.attachments[0] && <img src={a.attachments[0].url} className="event-image" alt="Event image"></img> } 
                                 <div className="media-body sa-event">
                                     <h5>{a.description}</h5>
                                     <p>{a.long_description}</p>
                                     <div className="sa-events">
-                                        <p><i className="fa fa-clock-o"></i>{a.starting_date + " " + a.starting_time}</p>
-                                        <p><i className="fa fa-map-marker"></i>{a.location.location_name}</p>
+                                        <p><i className="fa fa-clock-o"></i>{a.starting_date + " " + (a.starting_time || '')}</p>
+                                        { a.location && a.location.location_name && <p><i className="fa fa-map-marker"></i>{ a.location.location_name }</p> }
                                     </div>
                                 </div>
                             </div>
