@@ -38,11 +38,14 @@ function Reflection() {
 
     return(
 
-        <YouTube
-        videoId={data || ""}
-        opts={opts}
-        className="reflection-video"
-        />
+        // <YouTube
+        // videoId={data || ""}
+        // opts={opts}
+        // className="reflection-video"
+        // />
+        <div>
+          <iframe src="https://widget.spreaker.com/player?episode_id=16218812&theme=light&autoplay=false&playlist=false&cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2Ff4d9de61db8431c673c794ad2de8f0d9.jpg" width="100%" height="400px" frameborder="0"></iframe>
+        </div>
 
 
 
