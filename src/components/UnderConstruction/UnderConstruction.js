@@ -16,19 +16,16 @@ function UnderConstruction() {
                 </div>
             </section>
 
-            <section className="sa-product-details-section">
-                <div className="container sa-bg-color">
-                    <div className="row">
-                    <h1 className="weekly-bulletin-title">Under Construction</h1>
+            <section className="section-padding">
+                <div className="container">
+                
+                        <div className="section-header text-center">
+                        <h1>Under Construction</h1>
 
-                    
-                       
-                    </div>
-                            
-                        <h1 className="weekly-bulletin-title">This page will soon be available!</h1>
-                    
-                </div>
-            
+                            <h3>This page will soon be available!</h3>
+                        </div>
+
+            </div>
             </section>
         </div>
 

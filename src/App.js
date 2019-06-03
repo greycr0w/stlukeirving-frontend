@@ -20,6 +20,7 @@ import ParishStaff from './components/Parish/ParishStaff';
 import Information from './components/OurCommunity/Information';
 import Mission from './components/Mission/Mission';
 import ParishGroups from './components/Parish/ParishGroups';
+import Services from './components/Services/Services';
 
 
 class App extends Component {
@@ -45,6 +46,8 @@ class App extends Component {
                         <Route path="/information" component={Information}/>
                         <Route path="/mission" component={Mission}/>
                         <Route path="/parish_groups" component={ParishGroups}/>
+                        <Route path="/formation" component={UnderConstruction}/>
+                        <Route path="/services" component={Services}/>
                         
                     </div>
         <Footer></Footer>

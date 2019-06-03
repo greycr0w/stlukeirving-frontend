@@ -68,21 +68,21 @@ class Header extends Component {
                             </li>
 
                             <li className="dropdown">
-                                <Link to="/">Formation<span className="nav_arrow">
+                                <Link to="/formation">Formation<span className="nav_arrow">
                                     
                                 </span></Link>
 
                             </li>
 
                             <li className="dropdown">
-                                <Link to="/">Services<span className="nav_arrow">
+                                <Link to="/services">Services<span className="nav_arrow">
                                     
                                 </span></Link>
-                                <ul className="sub-menu">
+                                {/* <ul className="sub-menu">
                                         <li><Link to="/">Baptism</Link></li>
                                         <li><Link to="/">Marriage</Link></li>
                                     
-                                </ul>
+                                </ul> */}
                             </li>
 
 
