@@ -2,54 +2,32 @@ import React, { useState, useEffect } from 'react';
 import YouTube from 'react-youtube';
 import axios from 'axios';
 
+export default class Reflection extends React.Component {
 
-function Reflection() {
-    const [data, setData] = useState("");
-    const opts = {
-        height: '600',
-        width: '800',
-        playerVars: { 
-          autoplay: 0
-        }
-      };
+  constructor(props) {
+    super(props);
 
-    useEffect(() => {
-        async function fetchData(){
+    this.state = {
 
-          var result = await axios({ method: 'get',
-            url: 'https://api.stlukeirving.org/reflection',
-          })
-          .then( (response) => {
+    };
+  }
 
-              
-              console.log(response.data)
-              return response.data
-              
-          });
+  async componentDidMount() {
+    //super.componentDidMount();
 
+    var result = await axios({
+      method: 'get',
+      url: 'https://api.stlukeirving.org/reflection',
+    });
 
-          setData(result);
+    console.log(result);
 
-        }
-        fetchData()
-        
-      });
-    
+    this.setState(a => ({ result: result.data }));
+  }
 
-    return(
-
-        // <YouTube
-        // videoId={data || ""}
-        // opts={opts}
-        // className="reflection-video"
-        // />
-        <div>
-          <iframe src="https://widget.spreaker.com/player?episode_id=16218812&theme=light&autoplay=false&playlist=false&cover_image_url=https%3A%2F%2Fd3wo5wojvuv7l.cloudfront.net%2Fimages.spreaker.com%2Foriginal%2Ff4d9de61db8431c673c794ad2de8f0d9.jpg" width="100%" height="400px" frameborder="0"></iframe>
-        </div>
-
-
-
-    )
-}
-
-export default Reflection;
+  render() {
+    return this.state.result && 
+      <iframe src={"https://widget.spreaker.com/player?episode_id="+this.state.result.episode_id+"&theme=light&autoplay=false&playlist=false&cover_image_url="+this.state.result.episode_original_image_url} width="100%" height="400px" frameborder="0" />
+    || null;
+  }
+};
