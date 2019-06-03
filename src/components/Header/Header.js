@@ -91,14 +91,14 @@ class Header extends Component {
                                     
                                 </span></Link>
                                 <ul className="sub-menu">
-                                        <li><Link to="/">Parish Groups</Link></li>
+                                        <li><Link to="/parish_groups">Parish Groups</Link></li>
                                         <li><Link to="/parish_staff">Parish Staff</Link></li>
 
                                 </ul>
                             </li>
 
                             <li className="dropdown">
-                                <a href="">Calendar</a>
+                                <a href="https://saintlukecatholicchurch.mhsoftware.com/View.html?btnUnused=Return+to+Viewing+Calendars">Calendar</a>
                             </li>
 
                             <li>

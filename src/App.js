@@ -19,6 +19,7 @@ import History from './components/OurCommunity/History';
 import ParishStaff from './components/Parish/ParishStaff';
 import Information from './components/OurCommunity/Information';
 import Mission from './components/Mission/Mission';
+import ParishGroups from './components/Parish/ParishGroups';
 
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
                         <Route path="/parish_staff" component={ParishStaff}/>
                         <Route path="/information" component={Information}/>
                         <Route path="/mission" component={Mission}/>
+                        <Route path="/parish_groups" component={ParishGroups}/>
                         
                     </div>
         <Footer></Footer>
