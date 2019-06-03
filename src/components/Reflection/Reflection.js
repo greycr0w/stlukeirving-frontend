@@ -27,7 +27,7 @@ export default class Reflection extends React.Component {
 
   render() {
     return this.state.result && 
-      <iframe src={"https://widget.spreaker.com/player?episode_id="+this.state.result.episode_id+"&theme=light&autoplay=false&playlist=false&cover_image_url="+this.state.result.episode_original_image_url} width="100%" height="400px" frameborder="0" />
+      <iframe className="reflection" src={"https://widget.spreaker.com/player?episode_id="+this.state.result.episode_id+"&theme=light&autoplay=false&playlist=false&cover_image_url="+this.state.result.episode_original_image_url} width="100%" height="400px" frameborder="0" />
     || null;
   }
 };

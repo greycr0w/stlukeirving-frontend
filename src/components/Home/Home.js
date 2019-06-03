@@ -78,19 +78,18 @@ class Home extends Component {
 
                 <div className="container mt-5">
                     <div className="row">
-                        <a href="//httpbin.org" target="_blank" className="d-block col-md-4 main-card">
-                            <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
-                            <h4>Calendar</h4>
+                        <a href="//httpbin.org" target="_blank" className="d-block col-md-4 main-card text-align-center">
+                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
+
                         </a>
                         <MassSchedule>
-                            <a className="col-md-4 main-card">
-                                <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
-                                <h4>Mass Schedule</h4>
+                            <a className="col-md-4 main-card text-align-center">
+                                <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
                             </a>
                         </MassSchedule>
-                        <a href="#" className="d-block col-md-4 main-card">
-                            <img src="http://www.firstdallas.org/images/home/choir-orchestra.jpg" className="img-fluid" />
-                            <h4>Formation</h4>
+                        <a href="#" className="d-block col-md-4 main-card text-align-center">
+                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
+
                         </a>
                     </div>
                 </div>
