@@ -1,13 +1,9 @@
 import React, {Component} from 'react'
 import Popup from "reactjs-popup";
 
-import { InputGroup, FormControl, FormCheck} from 'react-bootstrap';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Checkbox from 'react-simple-checkbox';
 import NumberFormat from 'react-number-format';
-import {Redirect} from 'react-router-dom';
 import {Alert} from 'reactstrap';
-import ReactFitText from 'react-fittext';
 import axios from 'axios';
 import { css } from '@emotion/core';
 
