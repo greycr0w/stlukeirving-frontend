@@ -39,7 +39,13 @@
 
 }
 
+.about_us p {
 
+	font-size: 22px;
+    line-height: 38px;
+    margin-bottom: 25px;
+
+}
 .event-image {
 	width: 400px;
 }
@@ -2864,7 +2870,7 @@ transform: scale(0.3);
 	height:100%;
 	right:0px;
 	width:2000px;
-	margin-right:-2000px;
+	margin-right:-800px;
 	content:"";
 }
 .img_wrap {

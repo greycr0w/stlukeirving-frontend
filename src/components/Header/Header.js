@@ -62,6 +62,7 @@ class Header extends Component {
                                 <ul className="sub-menu">
                                         <li><Link to="/history">History</Link></li>
                                         <li><Link to="/information">Information</Link></li>
+                                        <li><Link to="/mission">Mission</Link></li>
                                     
                                 </ul>
                             </li>

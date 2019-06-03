@@ -64,7 +64,7 @@ class Home extends Component {
                                             <div className="banner-details">
                                                 <h2>Our Mission</h2>
                                                 <p>{this.state.bannerText}</p>
-                                                <Link to="/history" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
+                                                <Link to="/mission" className="sa-btn-transparent">Learn more About Us<img src="assets/images/icon/arrow-right.png" alt="img"></img></Link>
                                             </div>
                                         </div>
                                     </div>

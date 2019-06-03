@@ -12,13 +12,13 @@ import DonationApprovalPage from './components/DonationPage/DonationApprovalPage
 import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
 import Events from './components/Events/Events'
-import MassSchedule from './components/MassSchedule/MassSchedule';
 import ServicePayment from './components/ServicePayment/ServicePayment';
 import UnsubscribeNewsletter from './components/UnsubscribeNewsletter/UnsubscribeNewsletter';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 import History from './components/OurCommunity/History';
 import ParishStaff from './components/Parish/ParishStaff';
 import Information from './components/OurCommunity/Information';
+import Mission from './components/Mission/Mission';
 
 
 class App extends Component {
@@ -42,6 +42,7 @@ class App extends Component {
                         <Route path="/history" component={History}/>
                         <Route path="/parish_staff" component={ParishStaff}/>
                         <Route path="/information" component={Information}/>
+                        <Route path="/mission" component={Mission}/>
                         
                     </div>
         <Footer></Footer>
