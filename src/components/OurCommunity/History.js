@@ -21,7 +21,7 @@ function History() {
                 <div className="container">
                     <div className="about_us">
                         <div className="section-header text-center">
-                            <h2>History of Saint Luke Catholic  Church</h2>
+                            <h2>History</h2>
                         </div>
                         <p>St. Luke’s Catholic Church, in Irving, Texas achieved the status of a parish in 1947.  However, the real beginnings go back more than fifty years before this date.  Early day history of St. Luke Catholic Church began in 1860 with Mass being held in private homes. The mission of St. Luke was established in 1902.</p> 
 

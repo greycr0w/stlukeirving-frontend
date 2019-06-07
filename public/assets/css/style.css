@@ -71,7 +71,9 @@
 }
 
 
-
+.about_us p {
+	text-align: left;
+}
 .mnu_slide:active {
 	margin-top:30px;
 }
