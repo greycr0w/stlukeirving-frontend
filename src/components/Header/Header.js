@@ -1,25 +1,14 @@
 import React, {Component} from 'react'
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-  } from 'react-router-dom';
-import WeeklyBulletin from '../WeeklyBulletin/WeeklyBulletin';
-import MassSchedule from '../MassSchedule/MassSchedule';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
-
-
-
     constructor(props) {
         super(props)
 
         this.state = {
             show: ""
-        }
+        };
     }
-
 
     render() {
         return (
@@ -118,6 +107,5 @@ class Header extends Component {
         )
     }
 }
-
 
 export default Header;

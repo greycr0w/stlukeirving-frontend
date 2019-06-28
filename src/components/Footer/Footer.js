@@ -25,7 +25,7 @@ class Footer extends Component {
                         <div className="col-md-4 top_widget">
                             <div className="footer_logo">
                                 <div className="footer-logo-wrapper">
-                                    <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/bg/newstluke.png'} alt="image"></img>
+                                    <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/bg/newstluke.png'} alt="St. Luke Irving logo"></img>
                                 </div>
                             </div>
                         </div>
@@ -64,13 +64,11 @@ class Footer extends Component {
                     </div>
 
                     <div className="col-md-4 footer_widget">
-                    <div class="widget_inner">
-
-
-                	    <div class="instagram_img">
-                            <img src={process.env.PUBLIC_URL + '/assets/images/banner/church_footer.jpg'}></img>
+                        <div className="widget_inner">
+                            <div className="instagram_img">
+                                <img src={process.env.PUBLIC_URL + '/assets/images/banner/church_footer.jpg'}></img>
+                            </div>
                         </div>
-                    </div>
                     </div>
 
                     <div className="col-md-4 footer_widget">

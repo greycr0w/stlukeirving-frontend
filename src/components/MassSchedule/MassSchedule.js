@@ -1,12 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Popup from "reactjs-popup";
 
-
-
-let styles = {
-   
+let styles = {   
     width: '90%'
-  };
+};
   
 export default class MassSchedule extends React.Component {
     render() {

@@ -4,7 +4,7 @@ import MassSchedule from '../MassSchedule/MassSchedule'
 import {Link} from 'react-router-dom';
 import Reflection from '../Reflection/Reflection';
 import axios from 'axios';
-import {Container, Row, Col} from 'reactstrap'
+
 class Home extends Component {
     constructor(props) {
         super(props);

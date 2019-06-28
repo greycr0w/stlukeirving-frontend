@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
+    Route
 } from 'react-router-dom';
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import DonationPage from './components/DonationPage/DonationPage'
-import DonationApprovalPage from './components/DonationPage/DonationApprovalPage'
 import WeeklyBulletin from './components/WeeklyBulletin/WeeklyBulletin'
 import Home from './components/Home/Home'
 import Events from './components/Events/Events'
@@ -21,7 +17,6 @@ import Information from './components/OurCommunity/Information';
 import Mission from './components/Mission/Mission';
 import ParishGroups from './components/Parish/ParishGroups';
 import Services from './components/Services/Services';
-
 
 class App extends Component {
   render() {

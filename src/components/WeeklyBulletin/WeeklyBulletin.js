@@ -1,25 +1,23 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
-class WeeklyBulletin extends Component {
 
+class WeeklyBulletin extends Component {
     constructor(props) {
         super(props);
         this.state = {
             pdfFile: ""
-        }
-      
+        };
     }
-    componentDidMount() {
 
-        let pdfFile
+    componentDidMount() {
+        let pdfFile;
         axios({ method: 'get',
         url: 'https://api.stlukeirving.org/bulletin/last',
         })
         .then( (response) => {
-            pdfFile = response.data
+            pdfFile = response.data;
             console.log(response);
-            this.setState({pdfFile: pdfFile})
+            this.setState({pdfFile: pdfFile});
 
         })
         .catch(function (response) {

@@ -5,33 +5,18 @@ import Checkbox from 'react-simple-checkbox';
 import NumberFormat from 'react-number-format';
 import {Alert} from 'reactstrap';
 import axios from 'axios';
-import { css } from '@emotion/core';
 
 import Swal from 'sweetalert2';
 
-
-const override = css`
-    display: block;
-    margin: 0 auto;
-    border-color: red;
-`;
-
-
 let styles = {
-
     width: '85%',
-
 };
 
 let stylesOverlay = {
-
     paddingTop: '20px',
-
 };
 
 class JoinNewsletter extends Component {
-
-
     constructor(props) {
         super(props)
 
@@ -43,58 +28,42 @@ class JoinNewsletter extends Component {
             countries: [],
             email: "",
             isMounted: false
-        }
+        };
     }
 
     componentDidMount() {
-            axios({ method: 'get',
+        axios({
+            method: 'get',
             url: 'https://api.stlukeirving.org/country',
-            })
-            .then( (response) => {
-                
-                console.log(response.data);
-
-                // var us = response.data.filter(a=>a.key == "US")[0];
-                // var active_id = (us && us.id) || response.data[0].id;
-                this.setState({countries: response.data})
-
-            })
-            .catch(function (response) {
-                //handle error
-                console.log(response);
-            });
-         
-
+        })
+        .then( (response) => {
+            this.setState({ countries: response.data });
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+        });
     }
 
     async subscribe(close) {
         if(this.state.isMounted === false) {
             this.setState({isMounted: true})
-        }              
-          console.log("run")
-
-
+        }
+        
         if( this.state.active_id  && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tac == false)) {
             try {
-                var data = await axios.put('https://api.stlukeirving.org/mailing_list_record', {
+                await axios.put('https://api.stlukeirving.org/mailing_list_record', {
                     name: this.state.fullname,
                     email: this.state.email,
                     phone: this.state.phone,
                     country: { id: this.state.active_id }
                 });
-                console.log("run")
-                // You are beign redirected to PayPal...
-                 Swal.fire(
+
+                Swal.fire(
                     'We are happy!',
                     'Thank you for joining our community',
                     'success'
-                ).then(()=> {
-                    close();
-
-                });
-
-
-               
+                ).then(close);
             } catch(e) {
                 Swal.fire(
                     'That\'s Sad!',
@@ -117,10 +86,6 @@ class JoinNewsletter extends Component {
     }
 
     render() {
-       
-        console.log(this.state.phone);
-        console.log(this.state.active_id);
-
         return (
 
             <Popup trigger={<button className="btn dark-btn button weekly-bulletin-subscribe-button"> Weekly Bulletin <br></br> Subscribe </button>} overlayStyle={stylesOverlay} contentStyle={styles}modal>
@@ -232,14 +197,9 @@ class JoinNewsletter extends Component {
 function Errors(props) {
     const errors = props.errors;
 
-    if (true) {
-        return (
-            <Alert className="alert-newsletter" color="danger" isOpen={true}>
-                {errors}
-            </Alert>
-        );
-    }
-    return "";
+    return <Alert className="alert-newsletter" color="danger" isOpen={true}>
+        {errors}
+    </Alert>;
 }
 
 export default JoinNewsletter;

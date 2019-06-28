@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
-import { setServers } from 'dns';
-import { InputGroup, FormControl, FormCheck, FormGroup } from 'react-bootstrap';
+import { InputGroup, FormControl } from 'react-bootstrap';
 import Checkbox from 'react-simple-checkbox';
 import NumberFormat from 'react-number-format';
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch,
-  } from 'react-router-dom';
 import {Alert } from 'reactstrap';
 import ReactFitText from 'react-fittext';
 import axios from 'axios';
