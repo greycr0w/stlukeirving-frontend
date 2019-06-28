@@ -50,7 +50,7 @@ class JoinNewsletter extends Component {
             this.setState({isMounted: true})
         }
         
-        if( this.state.active_id  && !(this.state.fullname == null || this.state.fullname.length == 0) && !(this.state.email == null || this.state.email.length == 0) && !(this.state.phone == null || this.state.phone.length == 0) && !(this.state.tac == false)) {
+        if( this.state.active_id  && !(this.state.fullname === null || this.state.fullname.length === 0) && !(this.state.email === null || this.state.email.length === 0) && !(this.state.phone === null || this.state.phone.length === 0) && !(this.state.tac === false)) {
             try {
                 await axios.put('https://api.stlukeirving.org/mailing_list_record', {
                     name: this.state.fullname,
@@ -106,7 +106,7 @@ class JoinNewsletter extends Component {
                                         <div className="row">
                                             <div className="col-sm-12">
                                                 <input type="text" className="form-control border" placeholder="Fullname" name="fullname" value={this.state.fullname} onChange={this.handleChange.bind(this)}></input>
-                                                {(!this.state.fullname || !this.state.fullname.length) && this.state.isMounted == true 
+                                                {(!this.state.fullname || !this.state.fullname.length) && this.state.isMounted === true 
                                                 ?
                                                 <Errors errors="Fullname is required."/>
                                                 :
@@ -120,7 +120,7 @@ class JoinNewsletter extends Component {
 
                                                     <div className="col-sm-12">
                                                         <input type="email" className="form-control border" placeholder="Email address" name="email" value={this.state.email} onChange={this.handleChange.bind(this)}></input>
-                                                        {(!this.state.email || !this.state.email.length) && this.state.isMounted == true 
+                                                        {(!this.state.email || !this.state.email.length) && this.state.isMounted === true 
                                                         ?
                                                         <Errors errors="Email addrress is required."/>
                                                         :
@@ -133,7 +133,7 @@ class JoinNewsletter extends Component {
                                            <div className="col-sm-12">
                                            
                                            <NumberFormat placeholder="Cellphone number" className="form-control border"   value={this.state.phone} format="+1 (###) ###-####" mask="_" onValueChange={this.handlePhoneChange.bind(this)}/>
-                                               {(!this.state.phone || !this.state.phone.length) && this.state.isMounted == true 
+                                               {(!this.state.phone || !this.state.phone.length) && this.state.isMounted === true 
                                                ?
                                                <Errors errors="Phone number is required."/>
                                                :
@@ -175,7 +175,7 @@ class JoinNewsletter extends Component {
                                         <label className="newsletter-checkbox-label" htmlFor="id1">I agree to receive emails and SMS messages from Saint Luke Catholic Church.
                                                 
                                                 </label>
-                                                    {this.state.tak === false && this.state.isMounted == true 
+                                                    {this.state.tak === false && this.state.isMounted === true 
                                                     ?
                                                     <Errors errors="You need to agree to our Terms and Conditions."/>
                                                     :
@@ -183,7 +183,7 @@ class JoinNewsletter extends Component {
                                                     }
                                     </div>
                              
-                                    <a className="btn dark-btn mt-3" onClick={a => this.subscribe(close)} >Join</a>
+                                    <span className="btn dark-btn mt-3" onClick={a => this.subscribe(close)} >Join</span>
                         </form>
                     </div>
                     </div>

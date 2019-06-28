@@ -66,7 +66,7 @@ class Footer extends Component {
                     <div className="col-md-4 footer_widget">
                         <div className="widget_inner">
                             <div className="instagram_img">
-                                <img src={process.env.PUBLIC_URL + '/assets/images/banner/church_footer.jpg'}></img>
+                                <img src={process.env.PUBLIC_URL + '/assets/images/banner/church_footer.jpg'} alt="" />
                             </div>
                         </div>
                     </div>

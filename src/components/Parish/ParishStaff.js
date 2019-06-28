@@ -27,9 +27,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Antonia_CCD_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Antonia_CCD_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Antonia Morales</h6>
                                 <p>CCD Coordinator</p>
                               
@@ -38,9 +38,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/BrCharles_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/BrCharles_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Charles Muscat, c.s.</h6>
                                 <p>Parish Catechetical Leader</p>
                             </div>
@@ -48,9 +48,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Carmen_horiz_.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Carmen_horiz_.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Carmen Acosta</h6>
                                 <p>Safe Environment Director</p>
                             </div>
@@ -58,9 +58,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/DeaconDaniel_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/DeaconDaniel_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Daniel D. Segovia</h6>
                                 <p>Deacon</p>
                             </div>
@@ -68,9 +68,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Erika_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Erika_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Erika Zepeda Sandoval</h6>
                                 <p>Secretary</p>
                             </div>
@@ -78,9 +78,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Felipe_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Felipe_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Felipe Amaya</h6>
                                 <p>Maintenance</p>
                             </div>
@@ -88,9 +88,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Jose_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Jose_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Jose Munoz</h6>
                                 <p>Maintenance</p>
                             </div>
@@ -98,9 +98,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Mary_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Mary_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Mary O’Sullivan</h6>
                                 <p>Business Manager</p>
                             </div>
@@ -108,9 +108,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Mayra_CCD_.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Mayra_CCD_.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Mayra Valdez</h6>
                                 <p>Safe Environment Assistant</p>
                             </div>
@@ -118,9 +118,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Pdre Ernesto_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Pdre Ernesto_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Rev. Ernesto Esqueda Sanchez, c.s.</h6>
                                 <p>Pastor</p>
                             </div>
@@ -128,9 +128,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Pdre Jose_vert.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Pdre Jose_vert.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Rev. Jose Percy Cervera, c.s.</h6>
                                 <p>Parochial Vicar</p>
                             </div>
@@ -138,9 +138,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Pdre Richard_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Pdre Richard_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6>Rev. Richard Bezzegato, c.s</h6>
                                 <p>Parochial Vicar</p>
                             </div>
@@ -148,9 +148,9 @@ function ParishStaff() {
                         <div className="col-lg-4 col-sm-6">
                             <div className="box_wrap">
                                 <div className="team_img">
-                                    <img src="assets/images/pastor/Sister Irene_horiz.jpg" alt="image"></img>
+                                    <img src="assets/images/pastor/Sister Irene_horiz.jpg" alt=""></img>
                                 </div>
-                                <div className="icon"><img src="assets/images/icon.png" alt="image"></img></div>
+                                <div className="icon"><img src="assets/images/icon.png" alt=""></img></div>
                                 <h6> Sr. Irene Dinh</h6>
                                 <p>Parish Catechetcal Leade</p>
                             </div>

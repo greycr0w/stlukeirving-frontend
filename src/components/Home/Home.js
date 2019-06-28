@@ -53,7 +53,7 @@ class Home extends Component {
             <div style={{ height: '530px' }} />
 
                 <Background className="wrapper-bg">
-                    <img src={this.state.bannerImg} className="custom-bg"/>
+                    <img src={this.state.bannerImg} className="custom-bg" alt="" />
                   
                 </Background>
                          <div className="container mission-statement">
@@ -78,17 +78,17 @@ class Home extends Component {
 
                 <div className="container mt-5">
                     <div className="row">
-                        <a href="//httpbin.org" target="_blank" className="d-block col-md-4 main-card text-align-center">
-                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
+                        <a href="//httpbin.org" rel="noopener noreferrer" target="_blank" className="d-block col-md-4 main-card text-align-center">
+                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" alt="" />
 
                         </a>
                         <MassSchedule>
-                            <a className="col-md-4 main-card text-align-center">
-                                <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
+                            <a href="//httpbin.org" rel="noopener noreferrer" className="col-md-4 main-card text-align-center">
+                                <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" alt="" />
                             </a>
                         </MassSchedule>
-                        <a href="#" className="d-block col-md-4 main-card text-align-center">
-                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" />
+                        <a href="//httpbin.org" rel="noopener noreferrer" className="d-block col-md-4 main-card text-align-center">
+                            <img src={process.env.PUBLIC_URL + '/assets/images/squares/mass.png'} className="img-fluid" alt="" />
 
                         </a>
                     </div>
@@ -130,7 +130,7 @@ class Home extends Component {
                             <div className="sa-events-area">
                             <div className="media">
 
-                                { a.attachments[0] && <img src={a.attachments[0].url} className="event-image" alt="Event image"></img> } 
+                                { a.attachments[0] && <img src={a.attachments[0].url} className="event-image" alt="" /> } 
                                 <div className="media-body sa-event">
                                     <h5>{a.description}</h5>
                                     <p>{a.long_description}</p>
@@ -168,7 +168,7 @@ class Home extends Component {
                             <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
                             <div className="causes_chart">
                                 <p>Raised: <strong>$15,000.00</strong></p>
-                                <div className="chart"><img src="assets/images/chart.png" alt="image"></img></div>
+                                <div className="chart"><img src="assets/images/chart.png" alt=""></img></div>
                                 <p>Goal: <strong>$25,000.00</strong></p>
                             </div>
                             <a href="home-4.html#" className="btn btn-lg dark-btn">Donate Now</a>
@@ -183,7 +183,7 @@ class Home extends Component {
                             <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
                             <div className="causes_chart">
                                 <p>Raised: <strong>$15,000.00</strong></p>
-                                <div className="chart"><img src="assets/images/chart.png" alt="image"></img></div>
+                                <div className="chart"><img src="assets/images/chart.png" alt=""></img></div>
                                 <p>Goal: <strong>$25,000.00</strong></p>
                             </div>
                             <a href="home-4.html#" className="btn btn-lg dark-btn">Donate Now</a>
@@ -197,7 +197,7 @@ class Home extends Component {
         <Parallax strength={300}>
 
                 <Background className="wrapper-bg ">
-                    <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Full.jpg'} className="custom-bg"/>
+                    <img src={process.env.PUBLIC_URL + '/assets/images/bg/Church_Full.jpg'} className="custom-bg" alt="" />
                     <div className="reflection-bg">
                             &nbsp;
                         </div>

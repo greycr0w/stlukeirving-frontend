@@ -152,7 +152,7 @@ class Events extends Component {
                     <span>20</span> Aug'18
                 </div>
                 <div className="event_img">
-                    <a href="next-events.html#"><img src="../assets/images/event/event-1.jpg" alt="image"></img></a>
+                    <a href="next-events.html#"><img src="../assets/images/event/event-1.jpg" alt=""></img></a>
                 </div>
                 <div className="event_info">
                     <h4><a href="next-events.html#">Which is the same as saying</a></h4>
@@ -170,7 +170,7 @@ class Events extends Component {
                     <span>26</span> Aug'18
                 </div>
                 <div className="event_img">
-                    <a href="next-events.html#"><img src="../assets/images/event/event-2.jpg" alt="image"></img></a>
+                    <a href="next-events.html#"><img src="../assets/images/event/event-2.jpg" alt=""></img></a>
                 </div>
                 <div className="event_info">
                     <h4><a href="next-events.html#">On the other hand, we denounce</a></h4>

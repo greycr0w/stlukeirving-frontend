@@ -50,7 +50,7 @@ console.log(this.state);
 
                     <div className="weekly-bulletin-iframe">
         
-                        {this.state.pdfFile ? <iframe className="pdf-file" src={this.state.pdfFile.file.access_url}></iframe> : null}
+                        {this.state.pdfFile ? <iframe title="Weekly Bulletin" className="pdf-file" src={this.state.pdfFile.file.access_url}></iframe> : null}
 
                     </div>
                    

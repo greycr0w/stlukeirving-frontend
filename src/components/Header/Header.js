@@ -21,7 +21,7 @@ class Header extends Component {
                     <div className="logo">
                         <div className="app-logo-wrapper">
                             <Link to="/">
-                            <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/bg/newstluke.png'} alt="image"></img>
+                            <img className="app-logo" src={process.env.PUBLIC_URL + '/assets/images/bg/newstluke.png'} alt=""></img>
                             </Link>
                         </div>
                     </div> 
