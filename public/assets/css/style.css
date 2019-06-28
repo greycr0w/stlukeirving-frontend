@@ -292,9 +292,7 @@
 }
 
 .app-logo-wrapper {
-	margin-left: 150px;
 	height: 70px;
-    width: 200px;
 }
 .error-msg {
 	width: 270px;
@@ -598,6 +596,14 @@ img {
 	.res-margin-top-40 {
 		margin-top: 40px;
 	}
+}
+
+@media all and (max-width: 1200px){
+	
+}
+
+@media all and (min-width: 1200px){
+	
 }
 
 /*-----------------
@@ -1050,8 +1056,6 @@ header.sticky .header_top {
 	flex-grow: inherit;
 }
 .navbar-nav {
-	margin-top: 25px;
-	margin-right: 120px;
 	position: relative;
 	display:block;
 }
@@ -1069,17 +1073,15 @@ header.sticky .header_top {
 	display: block;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
-	padding: 13px 15px;
+	padding: 8px 7px;
 	margin: 0 auto;
 }
 .navbar-nav li a:hover, .navbar-nav li a.active {
 	color:#ddb668;
 }
-.navbar-nav .btn {
-	padding:10px 32px;
-}
+
 .navbar-nav .btn:hover {
 	color:#fff;
 }
@@ -1088,8 +1090,6 @@ header.sticky .header_top {
 -------------*/
 .navbar .navbar-nav li.dropdown > a {
 	text-shadow: 0.5px 0.5px 0.5px #525252;
-
-	padding-right: 15px;
 }
 .navbar .navbar-nav li.dropdown > a::after {
   
