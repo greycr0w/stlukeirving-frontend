@@ -50,7 +50,7 @@ class Home extends Component {
 
             <div>
             <Parallax strength={600}>
-            <div style={{ height: '635px' }} />
+            <div style={{ height: '530px' }} />
 
                 <Background className="wrapper-bg">
                     <img src={this.state.bannerImg} className="custom-bg"/>
