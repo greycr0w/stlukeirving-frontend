@@ -25,6 +25,8 @@ class Header extends Component {
         return (
 
         <header id="header" className="nav-stacked sa-header" data-spy="affix" data-offset-top="1">
+                        <div className="container">
+
             <nav id="navigation_bar" className="navbar navbar-default sa-navbar">
                   <div className="navbar-header">
                     <div className="logo">
@@ -110,7 +112,8 @@ class Header extends Component {
                     </div>
 
             </nav>
-            
+            </div>
+
         </header>
         )
     }
